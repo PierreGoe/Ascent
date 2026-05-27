@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>🚀 Projet 2026 – Charles GOEMANS</title>
+    <style>
+        :root {
+            --bg: #f4f6fa;
+            --card: #ffffff;
+            --border: rgba(0, 0, 0, .08);
+            --text: #111827;
+            --muted: #6b7a99;
+            --orange: #e04800;
+            --gold: #c97800;
+            --teal: #0a7c6e;
+            --r: 12px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ─────────────────────────── */
+        .hdr {
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .7rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            gap: .5rem;
+        }
+
+        .hdr-logo {
+            font-size: .9rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .hdr-logo em {
+            color: var(--orange);
+            font-style: normal;
+        }
+
+        .hdr-meta {
+            font-size: .68rem;
+            color: var(--muted);
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        /* ── STATES ─────────────────────────── */
+        .state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 55vh;
+            gap: .9rem;
+            color: var(--muted);
+            font-size: .9rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 34px;
+            height: 34px;
+            border: 3px solid var(--border);
+            border-top-color: var(--orange);
+            border-radius: 50%;
+            animation: spin .75s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .err-box {
+            max-width: 440px;
+            margin: 3rem auto;
+            padding: 1.75rem;
+            background: #fff8f6;
+            border: 1px solid #fcc;
+            border-radius: var(--r);
+            text-align: center;
+        }
+
+        .err-box h3 {
+            color: #c92a00;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        .err-box p {
+            color: var(--muted);
+            font-size: .82rem;
+            line-height: 1.6;
+        }
+
+        .err-box code {
+            background: rgba(0, 0, 0, .06);
+            padding: .1rem .4rem;
+            border-radius: 4px;
+        }
+
+        /* ── HERO ───────────────────────────── */
+        .hero {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding: 2rem 1.25rem 1.75rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            padding: .28rem .9rem;
+            border-radius: 999px;
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, .04);
+            border: 1px solid rgba(0, 0, 0, .08);
+            margin-bottom: .9rem;
+        }
+
+        .hero-num {
+            font-size: clamp(3rem, 13vw, 8rem);
+            font-weight: 900;
+            letter-spacing: -.05em;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--orange) 25%, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeUp .65s ease both;
+        }
+
+        .hero-unit {
+            font-size: .28em;
+            letter-spacing: -.01em;
+        }
+
+        .hero-equiv {
+            margin-top: .55rem;
+            font-size: clamp(.9rem, 3vw, 1.35rem);
+            font-weight: 700;
+            color: var(--teal);
+            animation: fadeUp .65s .08s ease both;
+        }
+
+        .hero-next {
+            margin-top: .3rem;
+            font-size: .8rem;
+            color: var(--muted);
+            animation: fadeUp .65s .16s ease both;
+        }
+
+        .pills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: .45rem;
+            margin-top: 1.2rem;
+        }
+
+        .pill {
+            padding: .28rem .8rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: .76rem;
+            color: var(--muted);
+        }
+
+        .pill strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── INTRO ─────────────────────── */
+        .intro {
+            padding: .9rem 1.25rem;
+            background: linear-gradient(135deg, rgba(224, 72, 0, .03), rgba(201, 120, 0, .05));
+            border-bottom: 1px solid var(--border);
+            font-size: .82rem;
+            line-height: 1.65;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .intro strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── SHARE BUTTON ──────────────────── */
+        .share-btn {
+            display: inline-flex; align-items: center; gap: .5rem;
+            margin-top: 1.3rem;
+            padding: .7rem 1.6rem;
+            background: linear-gradient(135deg, var(--orange), var(--gold));
+            color: #fff; font-size: .88rem; font-weight: 700;
+            border: none; border-radius: 999px; cursor: pointer;
+            box-shadow: 0 2px 12px rgba(224,72,0,.25);
+            transition: opacity .15s, transform .1s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .share-btn:hover  { opacity: .88; }
+        .share-btn:active { transform: scale(.95); } ──────────────────────────── */
+        .chart-section {
+            padding: 1.1rem 0 0;
+        }
+
+        .chart-lbl {
+            text-align: center;
+            font-size: .63rem;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--muted);
+            margin-bottom: .55rem;
+        }
+
+        .chart-wrap {
+            position: relative;
+            margin: 0 .75rem;
+            border-radius: var(--r);
+            overflow: hidden;
+            box-shadow: 0 1px 12px rgba(0, 0, 0, .07);
+            border: 1px solid var(--border);
+        }
+
+        .chart-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .tt {
+            position: absolute;
+            background: rgba(4, 8, 22, .95);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 8px;
+            padding: .45rem .7rem;
+            font-size: .76rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .1s;
+            white-space: nowrap;
+            z-index: 10;
+            color: #fff;
+        }
+
+        .tt.on {
+            opacity: 1;
+        }
+
+        .tt-day {
+            font-size: .65rem;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .tt-cum {
+            font-size: .98rem;
+            font-weight: 700;
+            color: #FFD166;
+        }
+
+        .tt-asc {
+            font-size: .7rem;
+            color: #38d9c0;
+            margin-top: 1px;
+        }
+
+        /* ── DAYS ───────────────────────────── */
+        .days-section {
+            padding: 1.1rem .75rem 3rem;
+        }
+
+        .days-lbl {
+            font-size: .63rem;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            color: var(--muted);
+            margin-bottom: .6rem;
+        }
+
+        .days-row {
+            display: flex;
+            flex-direction: column;
+            gap: .45rem;
+        }
+
+        .dc {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .6rem;
+            background: var(--card);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: .55rem .75rem;
+            cursor: pointer;
+            transition: border-color .12s, box-shadow .12s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .dc:hover,
+        .dc.hi {
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(224, 72, 0, .1);
+        }
+
+        .dc .dj {
+            font-size: .6rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            min-width: 2rem;
+        }
+
+        .dc .dv {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--orange);
+            min-width: 3.4rem;
+        }
+
+        .dc .dd {
+            font-size: .68rem;
+            color: var(--muted);
+            flex: 1;
+        }
+
+        .dc .db {
+            height: 4px;
+            background: var(--border);
+            border-radius: 99px;
+            overflow: hidden;
+            width: 72px;
+            flex-shrink: 0;
+        }
+
+        .dc .df {
+            height: 100%;
+            background: linear-gradient(90deg, var(--orange), var(--gold));
+            border-radius: 99px;
+        }
+
+        .dc-lnk {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--muted);
+            opacity: .45;
+            text-decoration: none;
+            padding: .2rem;
+            border-radius: 4px;
+            transition: opacity .12s, color .12s;
+        }
+
+        .dc-lnk:hover {
+            opacity: 1;
+            color: var(--orange);
+        }
+
+        /* ── ANIMATIONS ─────────────────────── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes drawLine {
+            from {
+                stroke-dashoffset: var(--L);
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                r: 5;
+                opacity: .9;
+            }
+
+            50% {
+                r: 7.5;
+                opacity: .5;
+            }
+        }
+
+        .cur-dot {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* ── RESPONSIVE ─────────────────────── */
+        @media (min-width: 600px) {
+            .hdr {
+                padding: .75rem 2rem;
+            }
+
+            .hero {
+                padding: 2.5rem 2rem 2rem;
+            }
+
+            .chart-wrap {
+                margin: 0 1.5rem;
+            }
+
+            .days-section {
+                padding: 1.25rem 1.5rem 3rem;
+            }
+
+            /* Horizontal carousel on tablet+ */
+            .days-row {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: .25rem;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .days-row::-webkit-scrollbar {
+                display: none;
+            }
+
+            .dc {
+                flex-shrink: 0;
+                scroll-snap-align: start;
+                width: 70px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: .5rem .35rem;
+                gap: 0;
+            }
+
+            .dc .dj {
+                font-size: .55rem;
+                min-width: unset;
+            }
+
+            .dc .dv {
+                font-size: .85rem;
+                margin-top: .18rem;
+                min-width: unset;
+            }
+
+            .dc .dd {
+                font-size: .55rem;
+                flex: none;
+                margin-top: .1rem;
+            }
+
+            .dc .db {
+                height: 2px;
+                margin-top: .38rem;
+                width: 100%;
+            }
+
+            .dc-lnk {
+                display: none;
+            }
+        }
+
+        @media (min-width: 960px) {
+            .chart-wrap {
+                margin: 0 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="state">
+            <div class="spinner"></div><span>Chargement Komoot…</span>
+        </div>
+    </div>
+
+    <script>
+        /* ══ CONFIG ══════════════════════════════════ */
+        const USER_ID = "1939029710958";
+        const START = "2026-05-02";
+        const API_BASE = `https://api.komoot.de/v007/users/${USER_ID}/tours/`;
+        const API_QS = "type=tour_recorded&sort_field=date&sort_direction=desc&status=public&page_size=100";
+
+        const MILESTONES = [
+
+            // MONUMENTS / BÂTIMENTS
+
+            { m: 324, e: "🗼", n: "Tour Eiffel" },
+
+            { m: 381, e: "🏙️", n: "Empire State Building" },
+
+            { m: 443, e: "🏢", n: "Willis Tower (Chicago)" },
+
+            { m: 540, e: "📡", n: "One World Trade Center + antenne" },
+
+            { m: 600, e: "🌆", n: "Méga gratte-ciel théorique" },
+
+            { m: 828, e: "🏙️", n: "Burj Khalifa" },
+
+            // ALTITUDES TERRESTRES
+
+            { m: 1000, e: "🌄", n: "Altitude de nombreuses villes alpines" },
+
+            { m: 1500, e: "⛷️", n: "Stations de ski européennes" },
+
+            { m: 2000, e: "🏔️", n: "Début du mal des montagnes léger" },
+
+            { m: 2500, e: "🥶", n: "Neige fréquente toute l’année" },
+
+            { m: 3000, e: "😮‍💨", n: "Respiration difficile sans acclimatation" },
+
+            { m: 3500, e: "🚵", n: "Altitude de nombreux cols andins" },
+
+            { m: 4000, e: "🦙", n: "Altiplano bolivien / Pérou" },
+
+            { m: 4500, e: "❄️", n: "Limite fréquente des arbres" },
+
+            { m: 4809, e: "🏔️", n: "Mont Blanc" },
+
+            { m: 5000, e: "🥵", n: "Début du mal aigu des montagnes" },
+
+            { m: 5500, e: "⛺", n: "Camps de haute montagne himalayens" },
+
+            { m: 5895, e: "🌋", n: "Kilimandjaro" },
+
+            { m: 6000, e: "🧗", n: "Grandes expéditions alpines" },
+
+            { m: 6500, e: "🫁", n: "Oxygène ≈ 40 % du niveau de la mer" },
+
+            { m: 6961, e: "🏔️", n: "Aconcagua" },
+
+            { m: 7000, e: "💀", n: "Zone de survie très difficile" },
+
+            { m: 7500, e: "🧊", n: "Début de la 'zone de la mort'" },
+
+            { m: 8000, e: "🏔️", n: "Les quatorze sommets de plus de 8000 m" },
+
+            { m: 8489, e: "🏔️", n: "Makalu" },
+
+            { m: 8611, e: "🏔️", n: "K2" },
+
+            { m: 8849, e: "🏔️", n: "Mont Everest" },
+
+            // AVIATION
+
+            { m: 9000, e: "🌡️", n: "Pression atmosphérique ÷3" },
+
+            { m: 10000, e: "✈️", n: "Altitude de croisière Airbus / Boeing" },
+
+            { m: 11000, e: "🥶", n: "Température extérieure ≈ −50°C" },
+
+            { m: 12000, e: "🛫", n: "Longs vols intercontinentaux" },
+
+            { m: 13000, e: "🌍", n: "90 % de l’atmosphère sous toi" },
+
+            { m: 14000, e: "🌐",  n: "Vue de la courbure terrestre légère" },
+
+            { m: 15000, e: "🛩️", n: "Jets militaires haute altitude" },
+
+            { m: 16000, e: "🛡️", n: "Jets de reconnaissance (U-2)" },
+
+            { m: 18000, e: "⚡",  n: "SR-71 Blackbird" },
+
+            { m: 20000, e: "🎈", n: "Ballons météo stratosphériques" },
+
+            // STRATOSPHÈRE
+
+            { m: 22000, e: "🔵", n: "Ciel bleu foncé profond" },
+
+            { m: 24000, e: "💨",  n: "Air ≈ 5 % de la densité au sol" },
+
+            { m: 25000, e: "🛡️", n: "Couche d’ozone dense" },
+
+            { m: 28000, e: "🌌", n: "Atmosphère extrêmement fine" },
+
+            { m: 30000, e: "🌑", n: "Ciel noir visible de jour" },
+
+            { m: 32000, e: "⭐", n: "Étoiles visibles en plein jour" },
+
+            { m: 34000, e: "🚫", n: "Altitude impossible pour les avions classiques" },
+
+            { m: 36000, e: "🌍",  n: "Horizon terrestre immense" },
+
+            { m: 38000, e: "🔭",  n: "Quasi-espace" },
+
+            { m: 39000, e: "🪂",  n: "Record de Felix Baumgartner" },
+
+            { m: 40000, e: "🌎",  n: "Courbure terrestre clairement visible" },
+
+            { m: 42000, e: "🌡️", n: "Température remonte (stratopause)" },
+
+            { m: 45000, e: "💯",  n: "< 1 % de l’air terrestre au-dessus" },
+
+            { m: 48000, e: "🎈", n: "Limite des ballons haute altitude" },
+
+            { m: 50000, e: "�",  n: "Fin de la stratosphère" },
+
+            // MÉSOSPHÈRE
+
+            { m: 52000, e: "🌌",  n: "Début de la mésosphère" },
+            { m: 55000, e: "📉",  n: "Température recommence à chuter fortement" },
+            { m: 58000, e: "💨",  n: "Air extrêmement raréfié" },
+            { m: 60000, e: "🔬",  n: "Limite des calculs aérodynamiques" },
+            { m: 62000, e: "🌑",  n: "Ciel presque totalement noir" },
+            { m: 64000, e: "🦅",  n: "Vol avec des ailes classiques impossible" },
+            { m: 66000, e: "⚡",  n: "Zone de transition atmosphérique violente" },
+            { m: 68000, e: "☄️",  n: "Météores visibles de nuit" },
+            { m: 70000, e: "☄️",  n: "Début de combustion des météores" },
+            { m: 72000, e: "⚡",  n: "Ionisation atmosphérique croissante" },
+            { m: 74000, e: "✨",  n: "Pression ≈ vide quasi total" },
+            { m: 76000, e: "🌈",  n: "Limite des phénomènes météo terrestres" },
+            { m: 78000, e: "☁️",  n: "Nuages noctulescents possibles" },
+            { m: 80000, e: "🌌",  n: "Début des aurores basses" },
+            { m: 82000, e: "⬛",  n: "Ciel totalement noir" },
+            { m: 84000, e: "💫",  n: "Frontière des traînées de plasma" },
+            { m: 86000, e: "🚫",  n: "Plus aucun avion possible" },
+            { m: 88000, e: "☄️",  n: "Début des traînées de météores" },
+            { m: 90000, e: "📡",  n: "Début de l'ionosphère" },
+            { m: 92000, e: "🌬️", n: "Air × 1 000 000 moins dense qu'au sol" },
+            { m: 94000, e: "🔄",  n: "Transition aérodynamique → spatiale" },
+            { m: 96000, e: "⚙️",  n: "Surfaces de contrôle inutiles" },
+            { m: 98000, e: "🚀",  n: "Zone pré-spatiale" },
+
+            // PROFONDEURS OCÉANIQUES (comparaison verticale)
+
+            { m: 10984, e: "🌊", n: "Fosse des Mariannes" },
+
+            // ESPACE
+
+            { m: 100000, e: "🚀", n: "Frontière officielle de l’espace" },
+
+            { m: 400000, e: "🛰️", n: "Station Spatiale Internationale" },
+
+            { m: 35786000, e: "📡", n: "Orbite géostationnaire" },
+
+            { m: 384400000, e: "🌕", n: "Distance Terre → Lune" },
+
+        ];
+
+        function zoneOf(m) {
+            if (m >= 400000) return { lbl: "En orbite (ISS)", e: "🛸", col: "#2563eb" };
+            if (m >= 200000) return { lbl: "Orbite basse terrestre (LEO)", e: "🛰️", col: "#1d4ed8" };
+            if (m >= 100000) return { lbl: "Ligne de Kármán franchie !", e: "🚀", col: "#7c3aed" };
+            if (m >= 50000) return { lbl: "Dans la mésosphère !", e: "🌌", col: "#0369a1" };
+            if (m >= 15000) return { lbl: "Dans la stratosphère !", e: "🌤️", col: "#0f766e" };
+            if (m >= 10000) return { lbl: "Altitude de croisière Airbus !", e: "✈️", col: "#15803d" };
+            if (m >= 8849) return { lbl: "L'Everest est en dessous !", e: "🏔️", col: "#b45309" };
+            if (m >= 4809) return { lbl: "Au-dessus du Mont Blanc !", e: "🏔️", col: "#c2410c" };
+            if (m >= 828) return { lbl: "Burj Khalifa dépassé !", e: "🌇", col: "#be185d" };
+            if (m >= 324) return { lbl: "Tour Eiffel dépassée !", e: "🗼", col: "#b45309" };
+            return { lbl: "En route !", e: "🚵", col: "#15803d" };
+        }
+
+        /* ══ LOG SCALE (80m → 500 km) ═══════════════ */
+        const L0 = Math.log10(80);
+        const L1 = Math.log10(500000);
+        function lp(m) { return (Math.log10(Math.max(80, m)) - L0) / (L1 - L0); }
+
+        /* ══ FORMATTERS ══════════════════════════════ */
+        const fmt = n => Math.round(n).toLocaleString("fr-FR");
+        const fmtM = m => m >= 1000 ? (m / 1000).toFixed(1) + "\u202fkm" : fmt(m) + "\u202fm";
+        const fmtD = (s, short) => new Date(s).toLocaleDateString("fr-FR",
+            short ? { day: "numeric", month: "short" }
+                : { weekday: "short", day: "numeric", month: "short" });
+
+        function cardinal(pts, t = 0.3) {
+            if (pts.length < 2) return pts.length ? `M${pts[0].x},${pts[0].y}` : "";
+            let d = `M${pts[0].x},${pts[0].y}`;
+            for (let i = 1; i < pts.length; i++) {
+                const a = pts[Math.max(i - 2, 0)], b = pts[i - 1];
+                const c = pts[i], e = pts[Math.min(i + 1, pts.length - 1)];
+                d += ` C${(b.x + (c.x - a.x) * t).toFixed(1)},${(b.y + (c.y - a.y) * t).toFixed(1)}`
+                    + ` ${(c.x - (e.x - b.x) * t).toFixed(1)},${(c.y - (e.y - b.y) * t).toFixed(1)}`
+                    + ` ${c.x.toFixed(1)},${c.y.toFixed(1)}`;
+            }
+            return d;
+        }
+
+        /* ══ DATA LOADING ════════════════════════════ */
+        async function loadTours() {
+            // 1 – Try live Komoot API
+            try {
+                return await fetchKomoot();
+            } catch (_) { /* CORS or network – fall through */ }
+
+            // 2 – Try local cached file (generated by scraper.py)
+            try {
+                return await loadLocalFile();
+            } catch (_) { /* no local file either */ }
+
+            throw new Error("Ni l'API Komoot ni le fichier local data/tours.js ne sont accessibles.");
+        }
+
+        async function fetchKomoot() {
+            let tours = [];
+            let page = 0;
+            while (true) {
+                const res = await fetch(`${API_BASE}?${API_QS}&page=${page}`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const data = await res.json();
+                const items = data._embedded?.tours ?? [];
+                if (!items.length) break;
+                for (const t of items) {
+                    tours.push({
+                        id: t.id ?? "",
+                        date: (t.date ?? "").slice(0, 10),
+                        ascent_m: t.elevation_up ?? 0,
+                        distance_km: (t.distance ?? 0) / 1000,
+                    });
+                }
+                const total = data.page?.totalElements ?? tours.length;
+                if (tours.length >= total || items.length < 100) break;
+                page++;
+            }
+            return tours;
+        }
+
+        function loadLocalFile() {
+            return new Promise((resolve, reject) => {
+                if (typeof KOMOOT_DATA !== "undefined") {
+                    resolve(KOMOOT_DATA.tours.map(t => ({
+                        id: t.id ?? "",
+                        date: (t.date ?? "").slice(0, 10),
+                        ascent_m: t.ascent_m ?? 0,
+                        distance_km: t.distance_km ?? 0,
+                    })));
+                    return;
+                }
+                const s = document.createElement("script");
+                s.src = "data/tours.js";
+                s.onload = () => resolve(KOMOOT_DATA.tours.map(t => ({
+                    id: t.id ?? "",
+                    date: (t.date ?? "").slice(0, 10),
+                    ascent_m: t.ascent_m ?? 0,
+                    distance_km: t.distance_km ?? 0,
+                })));
+                s.onerror = reject;
+                document.head.appendChild(s);
+            });
+        }
+
+        /* ══ INIT ════════════════════════════════════ */
+        async function init() {
+            try {
+                const tours = await loadTours();
+                render(tours);
+            } catch (err) {
+                document.getElementById("app").innerHTML = `
+      <div class="err-box">
+        <h3>Impossible de charger les données</h3>
+        <p>${err.message}</p>
+        <p style="margin-top:.6rem">Vérifie ta connexion internet — les données sont récupérées directement depuis Komoot.</p>
+      </div>`;
+            }
+        }
+
+        /* ══ RENDER ══════════════════════════════════ */
+        function render(allTours) {
+            const filtered = allTours
+                .filter(t => t.date >= START)
+                .sort((a, b) => a.date.localeCompare(b.date));
+
+            if (!filtered.length) {
+                document.getElementById("app").innerHTML =
+                    `<div class="state"><p>Aucune activité depuis le 2 mai 2026.</p></div>`;
+                return;
+            }
+
+            // Group by day
+            const byDay = {};
+            for (const t of filtered) {
+                if (!byDay[t.date]) byDay[t.date] = { date: t.date, ascent: 0, dist: 0, ids: [] };
+                byDay[t.date].ascent += t.ascent_m;
+                byDay[t.date].dist += t.distance_km;
+                if (t.id) byDay[t.date].ids.push(t.id);
+            }
+            const days = Object.values(byDay).sort((a, b) => a.date.localeCompare(b.date));
+
+            let c = 0;
+            for (const d of days) { c += d.ascent; d.cumul = c; }
+
+            const total = c;
+            const totalKm = days.reduce((s, d) => s + d.dist, 0);
+            const maxDay = Math.max(...days.map(d => d.ascent));
+            const zone = zoneOf(total);
+            const reached = MILESTONES.filter(m => total >= m.m);
+            const last = reached[reached.length - 1];
+            const next = MILESTONES.find(m => total < m.m);
+
+            // Store data for share card
+            window._sd = { total, totalKm, days, last, next, zone, fmt, fmtM };
+
+            document.getElementById("app").innerHTML = `
+    <header class="hdr">
+      <div class="hdr-logo">🏔️ <em>PROJET 2026</em> · Charles GOEMANS</div>
+      <div class="hdr-meta">Depuis ${fmtD(days[0].date)}<br>${days.length} jours</div>
+    </header>
+
+    <div class="intro">
+      🚵 <strong>Le concept</strong> · Charles additionne chaque mètre de dénivelé positif de ses sorties vélo depuis le 2 mai 2026
+      et le projette <strong>à la verticale</strong> — comme s’il grimpait sans jamais redescendre.
+      À quelle altitude fictive est-il aujourd’hui ?
+    </div>
+
+    <section class="hero">
+      <div class="badge" style="color:${zone.col}">${zone.e} ${zone.lbl}</div>
+      <div class="hero-num"><span id="hNum">0</span><span class="hero-unit"> m</span></div>
+      <div class="hero-equiv">${last ? `${last.e} ${(total / last.m).toFixed(2)}× ${last.n}` : ""}</div>
+      <div class="hero-next">
+        ${next
+                    ? `Prochain palier → ${next.e} ${next.n} (encore ${fmtM(next.m - total)})`
+                    : "🎉 Tous les paliers sont dépassés !"}
+      </div>
+      <div class="pills">
+        <div class="pill">📏 <strong>${fmt(Math.round(totalKm))} km</strong> parcourus</div>
+        <div class="pill">📅 <strong>${days.length}</strong> jours</div>
+        <div class="pill">🏔️ <strong>${(total / 8849).toFixed(2)}×</strong> l'Everest</div>
+      </div>
+      <button class="share-btn" onclick="shareCard()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Partager mon palier
+      </button>
+    </section>
+
+    <section class="chart-section">
+      <div class="chart-lbl">Dénivelé positif cumulé · échelle logarithmique</div>
+      <div class="chart-wrap" id="cWrap"><div class="tt" id="tt"></div></div>
+    </section>
+
+    <section class="days-section">
+      <div class="days-lbl">Chaque journée</div>
+      <div class="days-row" id="dRow">
+        ${days.map((d, i) => `
+          <div class='dc' id='dc${i}' onclick='hlDay(${i})'>
+            <div class='dj'>J${i + 1}</div>
+            <div class='dv'>↑${d.ascent >= 1000 ? (d.ascent / 1000).toFixed(1) + "k" : Math.round(d.ascent)}</div>
+            <div class='dd'>${fmtD(d.date, true)}</div>
+            <div class='db'><div class='df' style='width:${(d.ascent / maxDay * 100).toFixed(1)}%'></div></div>
+            ${d.ids && d.ids.length ? `<a class='dc-lnk' href='https://www.komoot.com/tour/${d.ids[0]}' target='_blank' rel='noopener noreferrer' onclick='event.stopPropagation()' title='Voir sur Komoot'><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/><polyline points='15 3 21 3 21 9'/><line x1='10' y1='14' x2='21' y2='3'/></svg></a>` : ""}
+          </div>`).join("")}
+      </div>
+    </section>`;
+
+            animNum("hNum", total);
+            renderChart(days, total);
+        }
+
+        /* ══ CHART ═══════════════════════════════════ */
+        function renderChart(days, total) {
+            const wrap = document.getElementById("cWrap");
+            if (!wrap) return;
+
+            const mob = window.innerWidth < 600;
+            const W = mob ? 390 : 900;
+            const H = mob ? 620 : 520;
+            const PL = 10, PR = 10, PT = 16, PB = 28;
+            const cW = W - PL - PR, cH = H - PT - PB;
+            const FS = mob ? 10.5 : 9.5;
+            const MGAP = mob ? 16 : 13;
+
+            const tx = i => PL + (days.length > 1 ? i / (days.length - 1) * cW : cW / 2);
+            const ty = m => PT + cH * (1 - lp(m));
+            const pts = days.map((d, i) => ({ x: tx(i), y: ty(d.cumul), d, i }));
+
+            const line = cardinal(pts);
+            const area = line
+                + ` L${pts[pts.length - 1].x.toFixed(1)},${(PT + cH).toFixed(1)}`
+                + ` L${pts[0].x.toFixed(1)},${(PT + cH).toFixed(1)} Z`;
+
+            // Altitude zones
+            const ZONES = [
+                { from: 0, to: 15000, bg: "rgba(76,153,59,.1)" },
+                { from: 15000, to: 50000, bg: "rgba(56,126,209,.1)" },
+                { from: 50000, to: 100000, bg: "rgba(44,82,200,.12)" },
+                { from: 100000, to: 200000, bg: "rgba(76,52,176,.14)" },
+                { from: 200000, to: 500000, bg: "rgba(30,27,75,.18)" },
+            ];
+            const ZONE_LBLS = [
+                { from: 0, to: 15000, lbl: "Montagnes" },
+                { from: 15000, to: 50000, lbl: "Stratosphère" },
+                { from: 50000, to: 100000, lbl: "Mésosphère" },
+                { from: 100000, to: 200000, lbl: "Espace" },
+                { from: 200000, to: 500000, lbl: "Orbite LEO" },
+            ];
+
+            const zoneSVG = ZONES.map(z => {
+                const yT = Math.max(PT, ty(z.to));
+                const yB = Math.min(PT + cH, ty(Math.max(80, z.from)));
+                const h = yB - yT;
+                return h > 0 ? `<rect x="${PL}" y="${yT.toFixed(1)}" width="${cW}" height="${h.toFixed(1)}" fill="${z.bg}"/>` : "";
+            }).join("");
+
+            const zoneLblSVG = ZONE_LBLS.map(z => {
+                const yT = Math.max(PT, ty(z.to));
+                const yB = Math.min(PT + cH, ty(Math.max(80, z.from)));
+                const h = yB - yT;
+                return h > 14 ? `<text x="${(PL + cW - 5).toFixed(1)}" y="${(yT + h / 2).toFixed(1)}" fill="rgba(0,0,0,.2)" font-size="${FS - 1}" font-weight="600" text-anchor="end" font-family="system-ui" dominant-baseline="middle">${z.lbl.toUpperCase()}</text>` : "";
+            }).join("");
+
+            // No stars in light mode
+
+            // Milestone lines (collision-safe, bottom → top)
+            let lastY = PT + cH + 40;
+            const msSVG = MILESTONES.map(ms => {
+                const y = ty(ms.m);
+                if (y < PT - 2 || y > PT + cH + 2) return "";
+                if (lastY - y < MGAP) return "";
+                lastY = y;
+                const ok = total >= ms.m;
+                return `
+      <line x1="${PL}" y1="${y.toFixed(1)}" x2="${PL + cW}" y2="${y.toFixed(1)}"
+            stroke="${ok ? "rgba(21,128,61,.45)" : "rgba(107,114,128,.28)"}" stroke-width=".9" stroke-dasharray="3,5"/>
+      <text x="${(PL + 4).toFixed(1)}" y="${(y - 2.5).toFixed(1)}"
+            fill="${ok ? "#166534" : "#374151"}" font-size="${FS}" font-family="system-ui" font-weight="${ok ? "600" : "400"}">
+        ${ms.e} ${ms.n} · ${fmtM(ms.m)}${ok ? " ✓" : ""}</text>`;
+            }).join("");
+
+            // X-axis labels
+            const step = Math.max(1, Math.ceil(days.length / (mob ? 6 : 13)));
+            const xLbls = days.map((d, i) => {
+                if (i % step !== 0 && i !== days.length - 1) return "";
+                return `<text x="${tx(i).toFixed(1)}" y="${H - PB + 16}"
+                  fill="#6b7a99" font-size="${FS - 1}"
+                  text-anchor="middle" font-family="system-ui">${fmtD(d.date, true)}</text>`;
+            }).join("");
+
+            const lpt = pts[pts.length - 1];
+
+            wrap.insertAdjacentHTML("afterbegin", `
+<svg class="chart-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chartBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#eef2ff"/>
+      <stop offset="35%"  stop-color="#eff6ff"/>
+      <stop offset="68%"  stop-color="#f0f9ff"/>
+      <stop offset="88%"  stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#f8f8f6"/>
+    </linearGradient>
+    <linearGradient id="aG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FF6B35" stop-opacity=".22"/>
+      <stop offset="55%"  stop-color="#FFD166" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#FFD166" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FFD166"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="cp"><rect x="${PL}" y="${PT}" width="${cW}" height="${cH}"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="${PL}" y="${PT}" width="${cW}" height="${cH}" fill="url(#chartBg)"/>
+  ${zoneSVG}
+  ${zoneLblSVG}
+  ${msSVG}
+
+  <!-- Area + curve -->
+  <path d="${area}" fill="url(#aG)" clip-path="url(#cp)"/>
+  <path id="cLine" d="${line}" fill="none" stroke="url(#lG)"
+        stroke-width="${mob ? 2.8 : 2.4}" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#glow)" clip-path="url(#cp)"/>
+
+  <!-- Day dots (hit areas + visible dots) -->
+  ${pts.map((p, i) => `
+    <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${mob ? 14 : 11}"
+            fill="transparent" data-i="${i}"/>
+    <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${mob ? 3 : 2.5}"
+            fill="#e04800" opacity=".8"/>`).join("")}
+
+  <!-- Current marker -->
+  <circle cx="${lpt.x.toFixed(1)}" cy="${lpt.y.toFixed(1)}" r="5"
+          fill="none" stroke="#e04800" stroke-width="1.8" class="cur-dot"/>
+  <text x="${lpt.x.toFixed(1)}" y="${(lpt.y - 14).toFixed(1)}"
+        font-size="${mob ? 17 : 15}" text-anchor="middle">🚴</text>
+
+  ${xLbls}
+</svg>`);
+
+            // Line draw animation
+            requestAnimationFrame(() => {
+                const el = document.getElementById("cLine");
+                if (el && el.getTotalLength) {
+                    const len = el.getTotalLength();
+                    el.style.setProperty("--L", len);
+                    el.style.strokeDasharray = len;
+                    el.style.strokeDashoffset = len;
+                    el.style.animation = "drawLine 2.4s cubic-bezier(.16,1,.3,1) forwards";
+                }
+            });
+
+            // Tooltip helper
+            const tt = document.getElementById("tt");
+            function showTip(cx, cy) {
+                const svg = wrap.querySelector("svg");
+                const rect = svg.getBoundingClientRect();
+                const frac = Math.max(0, Math.min(1, ((cx - rect.left) / rect.width * W - PL) / cW));
+                const idx = Math.round(frac * (days.length - 1));
+                const d = days[idx];
+                if (!d) return;
+                tt.innerHTML = `
+      <div class="tt-day">${fmtD(d.date)} · Jour ${idx + 1}</div>
+      <div class="tt-cum">${fmt(d.cumul)} m</div>
+      <div class="tt-asc">↑ ${fmt(d.ascent)} m ce jour ${zoneOf(d.cumul).e}</div>`;
+                let x = cx - rect.left + 14, y = cy - rect.top - 65;
+                if (x + 188 > rect.width) x = cx - rect.left - 202;
+                if (y < 4) y = cy - rect.top + 14;
+                tt.style.left = Math.max(0, x) + "px";
+                tt.style.top = Math.max(0, y) + "px";
+                tt.classList.add("on");
+            }
+
+            wrap.addEventListener("mousemove", e => showTip(e.clientX, e.clientY));
+            wrap.addEventListener("mouseleave", () => tt.classList.remove("on"));
+            wrap.addEventListener("touchmove", e => { e.preventDefault(); showTip(e.touches[0].clientX, e.touches[0].clientY); }, { passive: false });
+            wrap.addEventListener("touchend", () => setTimeout(() => tt.classList.remove("on"), 1400));
+
+            window._days = days;
+        }
+
+        /* ══ UTILS ═══════════════════════════════════ */
+        function animNum(id, target) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const dur = 1800, t0 = performance.now();
+            const tick = now => {
+                const p = Math.min(1, (now - t0) / dur);
+                el.textContent = Math.round((1 - Math.pow(1 - p, 4)) * target).toLocaleString("fr-FR");
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        }
+
+        function hlDay(i) {
+            document.querySelectorAll(".dc").forEach((c, j) => c.classList.toggle("hi", j === i));
+        }
+
+        /* ══ SHARE CARD ════════════════════════════ */
+        function shareCard() {
+            const sd = window._sd;
+            if (!sd) return;
+            const W = 1080, H = 1920;
+            const cvs = document.createElement('canvas');
+            cvs.width = W; cvs.height = H;
+            const ctx = cvs.getContext('2d');
+            drawShareCard(ctx, W, H, sd);
+            cvs.toBlob(async blob => {
+                const file = new File([blob], 'ascent-milestone.png', { type: 'image/png' });
+                try {
+                    if (navigator.share && navigator.canShare?.({ files: [file] })) {
+                        await navigator.share({ files: [file], title: 'Mon palier – Projet 2026' });
+                        return;
+                    }
+                } catch (e) { /* fall through to download */ }
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = 'ascent-milestone.png'; a.click();
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        function rcRect(ctx, x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y);
+            ctx.arcTo(x + w, y, x + w, y + r, r); ctx.lineTo(x + w, y + h - r);
+            ctx.arcTo(x + w, y + h, x + w - r, y + h, r); ctx.lineTo(x + r, y + h);
+            ctx.arcTo(x, y + h, x, y + h - r, r); ctx.lineTo(x, y + r);
+            ctx.arcTo(x, y, x + r, y, r); ctx.closePath();
+        }
+
+        function drawShareCard(ctx, W, H, { total, totalKm, days, last, next, zone, fmt, fmtM }) {
+            // Background
+            const bg = ctx.createLinearGradient(0, 0, 0, H);
+            bg.addColorStop(0,    '#010a1a');
+            bg.addColorStop(0.45, '#0c1b3a');
+            bg.addColorStop(0.75, '#18082a');
+            bg.addColorStop(1,    '#260810');
+            ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+            // Stars (deterministic)
+            for (let i = 0; i < 110; i++) {
+                const sx = (i * 137491 + 31) % W;
+                const sy = (i * 98765  + 53) % Math.round(H * .52);
+                const sr = i % 5 === 0 ? 2.8 : 1.3;
+                ctx.fillStyle = `rgba(255,255,255,${i % 3 === 0 ? .8 : .4})`;
+                ctx.beginPath(); ctx.arc(sx, sy, sr, 0, Math.PI * 2); ctx.fill();
+            }
+
+            ctx.textAlign = 'center';
+
+            // Top branding
+            ctx.fillStyle = 'rgba(255,255,255,.3)';
+            ctx.font = '500 38px -apple-system, system-ui, sans-serif';
+            ctx.fillText('🏔️  PROJET 2026  ·  Charles GOEMANS', W / 2, 108);
+
+            // Zone badge
+            ctx.fillStyle = zone.col;
+            ctx.font = '700 52px -apple-system, system-ui, sans-serif';
+            ctx.fillText(`${zone.e}  ${zone.lbl.toUpperCase()}`, W / 2, 228);
+
+            // Thin divider
+            const div = (y) => {
+                ctx.strokeStyle = 'rgba(255,255,255,.08)';
+                ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(W * .12, y); ctx.lineTo(W * .88, y); ctx.stroke();
+            };
+            div(272);
+
+            // Milestone emoji
+            if (last) {
+                ctx.font = '200px -apple-system, system-ui, sans-serif';
+                ctx.fillStyle = '#fff';
+                ctx.fillText(last.e, W / 2, 618);
+
+                // Badge box
+                ctx.fillStyle = 'rgba(255,209,102,.11)';
+                rcRect(ctx, W * .07, 655, W * .86, 88, 44); ctx.fill();
+                ctx.strokeStyle = 'rgba(255,209,102,.32)'; ctx.lineWidth = 1.5;
+                rcRect(ctx, W * .07, 655, W * .86, 88, 44); ctx.stroke();
+
+                ctx.fillStyle = '#FFD166';
+                ctx.font = '700 50px -apple-system, system-ui, sans-serif';
+                ctx.fillText(`✓  ${last.n}`, W / 2, 716);
+                ctx.fillStyle = 'rgba(255,209,102,.55)';
+                ctx.font = '400 36px -apple-system, system-ui, sans-serif';
+                ctx.fillText(fmtM(last.m), W / 2, 778);
+            }
+
+            // Total number
+            const numGrad = ctx.createLinearGradient(W * .15, 0, W * .85, 0);
+            numGrad.addColorStop(0, '#e04800'); numGrad.addColorStop(1, '#c97800');
+            ctx.fillStyle = numGrad;
+            ctx.font = '900 172px -apple-system, system-ui, sans-serif';
+            ctx.fillText(fmt(total), W / 2, 1020);
+            ctx.fillStyle = 'rgba(255,255,255,.45)';
+            ctx.font = '400 46px -apple-system, system-ui, sans-serif';
+            ctx.fillText('mètres de dénivelé cumulé', W / 2, 1090);
+
+            div(1148);
+
+            // Next milestone
+            if (next) {
+                const pct = total / next.m;
+                ctx.fillStyle = 'rgba(255,255,255,.28)';
+                ctx.font = '600 32px -apple-system, system-ui, sans-serif';
+                ctx.fillText('PROCHAIN PALIER', W / 2, 1210);
+                ctx.fillStyle = 'rgba(255,255,255,.9)';
+                ctx.font = '700 54px -apple-system, system-ui, sans-serif';
+                ctx.fillText(`${next.e}  ${next.n}`, W / 2, 1300);
+                ctx.fillStyle = 'rgba(255,255,255,.45)';
+                ctx.font = '400 38px -apple-system, system-ui, sans-serif';
+                ctx.fillText(`encore  ${fmtM(next.m - total)}`, W / 2, 1368);
+
+                // Progress bar
+                const bx = W * .1, by = 1418, bw = W * .8, bh = 22;
+                ctx.fillStyle = 'rgba(255,255,255,.1)';
+                rcRect(ctx, bx, by, bw, bh, 11); ctx.fill();
+                const pg = ctx.createLinearGradient(bx, 0, bx + bw, 0);
+                pg.addColorStop(0, '#e04800'); pg.addColorStop(1, '#FFD166');
+                ctx.fillStyle = pg;
+                rcRect(ctx, bx, by, Math.max(22, bw * pct), bh, 11); ctx.fill();
+                ctx.fillStyle = 'rgba(255,255,255,.35)';
+                ctx.font = '400 32px -apple-system, system-ui, sans-serif';
+                ctx.fillText(`${Math.round(pct * 100)} % accompli`, W / 2, 1490);
+            }
+
+            // Stats
+            div(1690);
+            ctx.fillStyle = 'rgba(255,255,255,.5)';
+            ctx.font = '500 40px -apple-system, system-ui, sans-serif';
+            ctx.fillText(`📅  ${days.length} jours  ·  📍  ${fmt(Math.round(totalKm))} km`, W / 2, 1770);
+            ctx.fillStyle = 'rgba(255,255,255,.28)';
+            ctx.font = '400 34px -apple-system, system-ui, sans-serif';
+            ctx.fillText('depuis le 2 mai 2026', W / 2, 1830);
+            ctx.fillStyle = 'rgba(255,255,255,.1)';
+            ctx.font = '400 26px -apple-system, system-ui, sans-serif';
+            ctx.fillText('projet2026.goemans.fr', W / 2, 1895);
+        }
+
+        init();
+    </script>
+</body>
+
+</html>
