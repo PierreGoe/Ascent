@@ -222,19 +222,32 @@
 
         /* ── SHARE BUTTON ──────────────────── */
         .share-btn {
-            display: inline-flex; align-items: center; gap: .5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
             margin-top: 1.3rem;
             padding: .7rem 1.6rem;
             background: linear-gradient(135deg, var(--orange), var(--gold));
-            color: #fff; font-size: .88rem; font-weight: 700;
-            border: none; border-radius: 999px; cursor: pointer;
-            box-shadow: 0 2px 12px rgba(224,72,0,.25);
+            color: #fff;
+            font-size: .88rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(224, 72, 0, .25);
             transition: opacity .15s, transform .1s;
             -webkit-tap-highlight-color: transparent;
         }
-        .share-btn:hover  { opacity: .88; }
-        .share-btn:active { transform: scale(.95); } ──────────────────────────── */
-        .chart-section {
+
+        .share-btn:hover {
+            opacity: .88;
+        }
+
+        .share-btn:active {
+            transform: scale(.95);
+        }
+
+        ──────────────────────────── */ .chart-section {
             padding: 1.1rem 0 0;
         }
 
@@ -513,21 +526,25 @@
             padding: 1.2rem 1.25rem;
             border-bottom: 1px solid var(--border);
         }
+
         .goals-title {
             font-size: 1rem;
             font-weight: 700;
             margin-bottom: .25rem;
         }
+
         .goals-subtitle {
             font-size: .75rem;
             color: var(--muted);
             margin-bottom: .8rem;
         }
+
         .goals-list {
             display: flex;
             flex-direction: column;
             gap: .4rem;
         }
+
         .goal-item {
             display: flex;
             align-items: center;
@@ -538,26 +555,32 @@
             border-radius: 8px;
             font-size: .8rem;
         }
+
         .goal-item.done {
-            border-color: rgba(10,124,110,.3);
-            background: rgba(10,124,110,.04);
+            border-color: rgba(10, 124, 110, .3);
+            background: rgba(10, 124, 110, .04);
         }
+
         .goal-item .goal-emoji {
             font-size: 1.1rem;
             flex-shrink: 0;
         }
+
         .goal-item .goal-info {
             flex: 1;
             min-width: 0;
         }
+
         .goal-item .goal-name {
             font-weight: 600;
             font-size: .78rem;
         }
+
         .goal-item .goal-val {
             font-size: .68rem;
             color: var(--muted);
         }
+
         .goal-item .goal-bar {
             width: 60px;
             height: 5px;
@@ -566,17 +589,21 @@
             overflow: hidden;
             flex-shrink: 0;
         }
+
         .goal-item .goal-fill {
             height: 100%;
             border-radius: 99px;
             transition: width .6s ease;
         }
+
         .goal-item .goal-fill.dist-fill {
             background: linear-gradient(90deg, var(--teal), #38d9c0);
         }
+
         .goal-item .goal-fill.elev-fill {
             background: linear-gradient(90deg, var(--orange), var(--gold));
         }
+
         .goal-item .goal-check {
             font-size: .85rem;
             flex-shrink: 0;
@@ -860,7 +887,7 @@
                         <div class="goal-name">${ms.n}</div>
                         <div class="goal-val">${ms.km.toLocaleString('fr-FR')}\u202fkm</div>
                     </div>
-                    <div class="goal-bar"><div class="goal-fill dist-fill" style="width:${(pct*100).toFixed(1)}%"></div></div>
+                    <div class="goal-bar"><div class="goal-fill dist-fill" style="width:${(pct * 100).toFixed(1)}%"></div></div>
                     <span class="goal-check">${done ? '\u2705' : ''}</span>
                 </div>`;
             }).join('');
@@ -872,9 +899,9 @@
                     <span class="goal-emoji">${ms.e}</span>
                     <div class="goal-info">
                         <div class="goal-name">${ms.n} · ${fmtM(ms.m)}</div>
-                        <div class="goal-val">${ms.desc || '' }</div>
+                        <div class="goal-val">${ms.desc || ''}</div>
                     </div>
-                    <div class="goal-bar"><div class="goal-fill elev-fill" style="width:${(pct*100).toFixed(1)}%"></div></div>
+                    <div class="goal-bar"><div class="goal-fill elev-fill" style="width:${(pct * 100).toFixed(1)}%"></div></div>
                     <span class="goal-check">${done ? '\u2705' : ''}</span>
                 </div>`;
             }).join('');
@@ -1109,16 +1136,16 @@
         function drawShareCard(ctx, W, H, { total, totalKm, days, last, next, zone, fmt, fmtM }) {
             // Background
             const bg = ctx.createLinearGradient(0, 0, 0, H);
-            bg.addColorStop(0,    '#010a1a');
+            bg.addColorStop(0, '#010a1a');
             bg.addColorStop(0.45, '#0c1b3a');
             bg.addColorStop(0.75, '#18082a');
-            bg.addColorStop(1,    '#260810');
+            bg.addColorStop(1, '#260810');
             ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
 
             // Stars (deterministic)
             for (let i = 0; i < 110; i++) {
                 const sx = (i * 137491 + 31) % W;
-                const sy = (i * 98765  + 53) % Math.round(H * .52);
+                const sy = (i * 98765 + 53) % Math.round(H * .52);
                 const sr = i % 5 === 0 ? 2.8 : 1.3;
                 ctx.fillStyle = `rgba(255,255,255,${i % 3 === 0 ? .8 : .4})`;
                 ctx.beginPath(); ctx.arc(sx, sy, sr, 0, Math.PI * 2); ctx.fill();
