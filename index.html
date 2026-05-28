@@ -656,17 +656,15 @@
         ];
 
         function zoneOf(m) {
-            if (m >= 2000000) return { lbl: "Le Grand Vide", e: "🌌", col: "#1d4ed8" };
-            if (m >= 100000) return { lbl: "L’Espace Proche", e: "🛰️", col: "#7c3aed" };
-            if (m >= 50000) return { lbl: "Zone des Météores", e: "🌠", col: "#0369a1" };
-            if (m >= 15000) return { lbl: "Haute Stratosphère", e: "🎈", col: "#0f766e" };
-            if (m >= 3000) return { lbl: "Basse Atmosphère", e: "🚁", col: "#15803d" };
+            if (m >= 50000) return { lbl: "Au-delà de la stratosphère", e: "🌠", col: "#7c3aed" };
+            if (m >= 15000) return { lbl: "Dans la stratosphère", e: "🎈", col: "#0f766e" };
+            if (m >= 3000) return { lbl: "Basse atmosphère", e: "🚁", col: "#15803d" };
             return { lbl: "En route !", e: "🚵", col: "#b45309" };
         }
 
         /* ══ LOG SCALE (80m → 36 000 km) ════════════ */
         const L0 = Math.log10(80);
-        const L1 = Math.log10(36000000);
+        const L1 = Math.log10(80000);
         function lp(m) { return (Math.log10(Math.max(80, m)) - L0) / (L1 - L0); }
 
         /* ══ FORMATTERS ══════════════════════════════ */
@@ -933,16 +931,12 @@
             const ZONES = [
                 { from: 0, to: 15000, bg: "rgba(76,153,59,.1)" },
                 { from: 15000, to: 50000, bg: "rgba(56,126,209,.1)" },
-                { from: 50000, to: 100000, bg: "rgba(44,82,200,.12)" },
-                { from: 100000, to: 2000000, bg: "rgba(76,52,176,.14)" },
-                { from: 2000000, to: 36000000, bg: "rgba(30,27,75,.18)" },
+                { from: 50000, to: 80000, bg: "rgba(44,82,200,.12)" },
             ];
             const ZONE_LBLS = [
                 { from: 0, to: 15000, lbl: "Basse Atmosphère" },
                 { from: 15000, to: 50000, lbl: "Stratosphère" },
-                { from: 50000, to: 100000, lbl: "Zone des Météores" },
-                { from: 100000, to: 2000000, lbl: "Espace Proche" },
-                { from: 2000000, to: 36000000, lbl: "Grand Vide" },
+                { from: 50000, to: 80000, lbl: "Mésosphère" },
             ];
 
             const zoneSVG = ZONES.map(z => {
