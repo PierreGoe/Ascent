@@ -507,6 +507,80 @@
                 margin: 0 2.5rem;
             }
         }
+
+        /* ── GOALS SECTIONS ─────────────── */
+        .goals-section {
+            padding: 1.2rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .goals-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: .25rem;
+        }
+        .goals-subtitle {
+            font-size: .75rem;
+            color: var(--muted);
+            margin-bottom: .8rem;
+        }
+        .goals-list {
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+        }
+        .goal-item {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            padding: .5rem .7rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: .8rem;
+        }
+        .goal-item.done {
+            border-color: rgba(10,124,110,.3);
+            background: rgba(10,124,110,.04);
+        }
+        .goal-item .goal-emoji {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .goal-item .goal-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .goal-item .goal-name {
+            font-weight: 600;
+            font-size: .78rem;
+        }
+        .goal-item .goal-val {
+            font-size: .68rem;
+            color: var(--muted);
+        }
+        .goal-item .goal-bar {
+            width: 60px;
+            height: 5px;
+            background: var(--border);
+            border-radius: 99px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .goal-item .goal-fill {
+            height: 100%;
+            border-radius: 99px;
+            transition: width .6s ease;
+        }
+        .goal-item .goal-fill.dist-fill {
+            background: linear-gradient(90deg, var(--teal), #38d9c0);
+        }
+        .goal-item .goal-fill.elev-fill {
+            background: linear-gradient(90deg, var(--orange), var(--gold));
+        }
+        .goal-item .goal-check {
+            font-size: .85rem;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 
@@ -526,178 +600,46 @@
         const API_QS = "type=tour_recorded&sort_field=date&sort_direction=desc&status=public&page_size=100";
 
         const MILESTONES = [
-
-            // MONUMENTS / BÂTIMENTS
-
-            { m: 324, e: "🗼", n: "Tour Eiffel" },
-
-            { m: 381, e: "🏙️", n: "Empire State Building" },
-
-            { m: 443, e: "🏢", n: "Willis Tower (Chicago)" },
-
-            { m: 540, e: "📡", n: "One World Trade Center + antenne" },
-
-            { m: 600, e: "🌆", n: "Méga gratte-ciel théorique" },
-
-            { m: 828, e: "🏙️", n: "Burj Khalifa" },
-
-            // ALTITUDES TERRESTRES
-
-            { m: 1000, e: "🌄", n: "Altitude de nombreuses villes alpines" },
-
-            { m: 1500, e: "⛷️", n: "Stations de ski européennes" },
-
-            { m: 2000, e: "🏔️", n: "Début du mal des montagnes léger" },
-
-            { m: 2500, e: "🥶", n: "Neige fréquente toute l’année" },
-
-            { m: 3000, e: "😮‍💨", n: "Respiration difficile sans acclimatation" },
-
-            { m: 3500, e: "🚵", n: "Altitude de nombreux cols andins" },
-
-            { m: 4000, e: "🦙", n: "Altiplano bolivien / Pérou" },
-
-            { m: 4500, e: "❄️", n: "Limite fréquente des arbres" },
-
-            { m: 4809, e: "🏔️", n: "Mont Blanc" },
-
-            { m: 5000, e: "🥵", n: "Début du mal aigu des montagnes" },
-
-            { m: 5500, e: "⛺", n: "Camps de haute montagne himalayens" },
-
-            { m: 5895, e: "🌋", n: "Kilimandjaro" },
-
-            { m: 6000, e: "🧗", n: "Grandes expéditions alpines" },
-
-            { m: 6500, e: "🫁", n: "Oxygène ≈ 40 % du niveau de la mer" },
-
-            { m: 6961, e: "🏔️", n: "Aconcagua" },
-
-            { m: 7000, e: "💀", n: "Zone de survie très difficile" },
-
-            { m: 7500, e: "🧊", n: "Début de la 'zone de la mort'" },
-
-            { m: 8000, e: "🏔️", n: "Les quatorze sommets de plus de 8000 m" },
-
-            { m: 8489, e: "🏔️", n: "Makalu" },
-
-            { m: 8611, e: "🏔️", n: "K2" },
-
-            { m: 8849, e: "🏔️", n: "Mont Everest" },
-
-            // AVIATION
-
-            { m: 9000, e: "🌡️", n: "Pression atmosphérique ÷3" },
-
-            { m: 10000, e: "✈️", n: "Altitude de croisière Airbus / Boeing" },
-
-            { m: 11000, e: "🥶", n: "Température extérieure ≈ −50°C" },
-
-            { m: 12000, e: "🛫", n: "Longs vols intercontinentaux" },
-
-            { m: 13000, e: "🌍", n: "90 % de l’atmosphère sous toi" },
-
-            { m: 14000, e: "🌐",  n: "Vue de la courbure terrestre légère" },
-
-            { m: 15000, e: "🛩️", n: "Jets militaires haute altitude" },
-
-            { m: 16000, e: "🛡️", n: "Jets de reconnaissance (U-2)" },
-
-            { m: 18000, e: "⚡",  n: "SR-71 Blackbird" },
-
-            { m: 20000, e: "🎈", n: "Ballons météo stratosphériques" },
-
-            // STRATOSPHÈRE
-
-            { m: 22000, e: "🔵", n: "Ciel bleu foncé profond" },
-
-            { m: 24000, e: "💨",  n: "Air ≈ 5 % de la densité au sol" },
-
-            { m: 25000, e: "🛡️", n: "Couche d’ozone dense" },
-
-            { m: 28000, e: "🌌", n: "Atmosphère extrêmement fine" },
-
-            { m: 30000, e: "🌑", n: "Ciel noir visible de jour" },
-
-            { m: 32000, e: "⭐", n: "Étoiles visibles en plein jour" },
-
-            { m: 34000, e: "🚫", n: "Altitude impossible pour les avions classiques" },
-
-            { m: 36000, e: "🌍",  n: "Horizon terrestre immense" },
-
-            { m: 38000, e: "🔭",  n: "Quasi-espace" },
-
-            { m: 39000, e: "🪂",  n: "Record de Felix Baumgartner" },
-
-            { m: 40000, e: "🌎",  n: "Courbure terrestre clairement visible" },
-
-            { m: 42000, e: "🌡️", n: "Température remonte (stratopause)" },
-
-            { m: 45000, e: "💯",  n: "< 1 % de l’air terrestre au-dessus" },
-
-            { m: 48000, e: "🎈", n: "Limite des ballons haute altitude" },
-
-            { m: 50000, e: "�",  n: "Fin de la stratosphère" },
-
-            // MÉSOSPHÈRE
-
-            { m: 52000, e: "🌌",  n: "Début de la mésosphère" },
-            { m: 55000, e: "📉",  n: "Température recommence à chuter fortement" },
-            { m: 58000, e: "💨",  n: "Air extrêmement raréfié" },
-            { m: 60000, e: "🔬",  n: "Limite des calculs aérodynamiques" },
-            { m: 62000, e: "🌑",  n: "Ciel presque totalement noir" },
-            { m: 64000, e: "🦅",  n: "Vol avec des ailes classiques impossible" },
-            { m: 66000, e: "⚡",  n: "Zone de transition atmosphérique violente" },
-            { m: 68000, e: "☄️",  n: "Météores visibles de nuit" },
-            { m: 70000, e: "☄️",  n: "Début de combustion des météores" },
-            { m: 72000, e: "⚡",  n: "Ionisation atmosphérique croissante" },
-            { m: 74000, e: "✨",  n: "Pression ≈ vide quasi total" },
-            { m: 76000, e: "🌈",  n: "Limite des phénomènes météo terrestres" },
-            { m: 78000, e: "☁️",  n: "Nuages noctulescents possibles" },
-            { m: 80000, e: "🌌",  n: "Début des aurores basses" },
-            { m: 82000, e: "⬛",  n: "Ciel totalement noir" },
-            { m: 84000, e: "💫",  n: "Frontière des traînées de plasma" },
-            { m: 86000, e: "🚫",  n: "Plus aucun avion possible" },
-            { m: 88000, e: "☄️",  n: "Début des traînées de météores" },
-            { m: 90000, e: "📡",  n: "Début de l'ionosphère" },
-            { m: 92000, e: "🌬️", n: "Air × 1 000 000 moins dense qu'au sol" },
-            { m: 94000, e: "🔄",  n: "Transition aérodynamique → spatiale" },
-            { m: 96000, e: "⚙️",  n: "Surfaces de contrôle inutiles" },
-            { m: 98000, e: "🚀",  n: "Zone pré-spatiale" },
-
-            // PROFONDEURS OCÉANIQUES (comparaison verticale)
-
-            { m: 10984, e: "🌊", n: "Fosse des Mariannes" },
-
-            // ESPACE
-
-            { m: 100000, e: "🚀", n: "Frontière officielle de l’espace" },
-
-            { m: 400000, e: "🛰️", n: "Station Spatiale Internationale" },
-
-            { m: 35786000, e: "📡", n: "Orbite géostationnaire" },
-
-            { m: 384400000, e: "🌕", n: "Distance Terre → Lune" },
-
+            // 🚁 LA BASSE ATMOSPHÈRE (0 à 15 km)
+            { m: 3000, e: "🪂", n: "Parachutisme civil", desc: "Hauteur classique d’un saut en tandem (~40s de chute libre)" },
+            { m: 10000, e: "✈️", n: "Avions de ligne", desc: "Vous survolez l’Everest ; l’air est si pur qu’on voit la courbure de l’horizon" },
+            { m: 12000, e: "🛩️", n: "Jet d’affaires", desc: "Les jets privés volent un peu plus haut pour éviter les embouteillages du ciel" },
+
+            // 🎈 LA HAUTE STRATOSPHÈRE (15 à 50 km)
+            { m: 18000, e: "🦅", n: "Le Concorde", desc: "Les passagers voyaient le ciel devenir bleu marine foncé, presque noir, même en plein jour" },
+            { m: 21000, e: "🛩️", n: "SR-71 Blackbird", desc: "Capable de traverser les États-Unis en 1h, volant là où l’air est trop rare pour les chasseurs" },
+            { m: 31000, e: "🎈", n: "Ballons Google Loon", desc: "Des ballons géants diffusant internet, flottant bien au-dessus des tempêtes" },
+            { m: 39000, e: "💥", n: "Capsule Red Bull Stratos", desc: "Felix Baumgartner s’élance ; sans combinaison, le sang se mettrait à bouillir" },
+
+            // 🌠 AU-DELÀ DE LA STRATOSPHÈRE (50 à 70 km)
+            { m: 50000, e: "🌌", n: "Fin de la stratosphère", desc: "L’air est un million de fois moins dense qu’au sol, bienvenue dans la mésosphère" },
+            { m: 60000, e: "🚀", n: "Fusées-sondes", desc: "Petites fusées scientifiques qui font un bond vertical pour des mesures avant de retomber" },
+            { m: 70000, e: "⚡", n: "Avions-fusées (X-15)", desc: "Prototypes à moteurs de fusée atteignant des vitesses hypersoniques aux limites de l’espace" },
+        ];
+
+        const DISTANCE_MILESTONES = [
+            { km: 1000, e: "🇫🇷", n: "Paris → Marseille" },
+            { km: 2000, e: "🇪🇸", n: "Paris → Marseille x2 (ou Paris → Barcelone AR)" },
+            { km: 3000, e: "🚴", n: "Distance d’un Tour de France" },
+            { km: 4000, e: "🇹🇷", n: "Paris → Istanbul" },
+            { km: 5000, e: "🇫🇷", n: "Paris → Marseille x6" },
+            { km: 6000, e: "🇷🇺", n: "Paris → Moscou" },
+            { km: 7000, e: "🌍", n: "Paris → Marseille x9" },
+            { km: 8000, e: "🏁", n: "Objectif final – Cap Nord atteint !" },
         ];
 
         function zoneOf(m) {
-            if (m >= 400000) return { lbl: "En orbite (ISS)", e: "🛸", col: "#2563eb" };
-            if (m >= 200000) return { lbl: "Orbite basse terrestre (LEO)", e: "🛰️", col: "#1d4ed8" };
-            if (m >= 100000) return { lbl: "Ligne de Kármán franchie !", e: "🚀", col: "#7c3aed" };
-            if (m >= 50000) return { lbl: "Dans la mésosphère !", e: "🌌", col: "#0369a1" };
-            if (m >= 15000) return { lbl: "Dans la stratosphère !", e: "🌤️", col: "#0f766e" };
-            if (m >= 10000) return { lbl: "Altitude de croisière Airbus !", e: "✈️", col: "#15803d" };
-            if (m >= 8849) return { lbl: "L'Everest est en dessous !", e: "🏔️", col: "#b45309" };
-            if (m >= 4809) return { lbl: "Au-dessus du Mont Blanc !", e: "🏔️", col: "#c2410c" };
-            if (m >= 828) return { lbl: "Burj Khalifa dépassé !", e: "🌇", col: "#be185d" };
-            if (m >= 324) return { lbl: "Tour Eiffel dépassée !", e: "🗼", col: "#b45309" };
-            return { lbl: "En route !", e: "🚵", col: "#15803d" };
+            if (m >= 2000000) return { lbl: "Le Grand Vide", e: "🌌", col: "#1d4ed8" };
+            if (m >= 100000) return { lbl: "L’Espace Proche", e: "🛰️", col: "#7c3aed" };
+            if (m >= 50000) return { lbl: "Zone des Météores", e: "🌠", col: "#0369a1" };
+            if (m >= 15000) return { lbl: "Haute Stratosphère", e: "🎈", col: "#0f766e" };
+            if (m >= 3000) return { lbl: "Basse Atmosphère", e: "🚁", col: "#15803d" };
+            return { lbl: "En route !", e: "🚵", col: "#b45309" };
         }
 
-        /* ══ LOG SCALE (80m → 500 km) ═══════════════ */
+        /* ══ LOG SCALE (80m → 36 000 km) ════════════ */
         const L0 = Math.log10(80);
-        const L1 = Math.log10(500000);
+        const L1 = Math.log10(36000000);
         function lp(m) { return (Math.log10(Math.max(80, m)) - L0) / (L1 - L0); }
 
         /* ══ FORMATTERS ══════════════════════════════ */
@@ -837,13 +779,14 @@
             document.getElementById("app").innerHTML = `
     <header class="hdr">
       <div class="hdr-logo">🏔️ <em>PROJET 2026</em> · Charles GOEMANS</div>
-      <div class="hdr-meta">Depuis ${fmtD(days[0].date)}<br>${days.length} jours</div>
+      <div class="hdr-meta"><a href="https://associationstepbystep.com" target="_blank" rel="noopener noreferrer" style="color:var(--orange);font-weight:600;text-decoration:none;font-size:.72rem;">Step by Step ↗</a><br>Depuis ${fmtD(days[0].date)} · ${days.length} jours</div>
     </header>
 
     <div class="intro">
-      🚵 <strong>Le concept</strong> · Charles additionne chaque mètre de dénivelé positif de ses sorties vélo depuis le 2 mai 2026
-      et le projette <strong>à la verticale</strong> — comme s’il grimpait sans jamais redescendre.
-      À quelle altitude fictive est-il aujourd’hui ?
+      🚵 <strong>Charles voyage actuellement de France jusqu’au Cap Nord en Norvège, à l’aide d’un vélo couché.</strong>
+      Pour le soutenir et vous aider à vous représenter l’effort, voilà une petite démonstration fun de l’ampleur du projet :
+      chaque mètre de dénivelé positif est additionné et projeté <strong>à la verticale</strong> — comme s’il grimpait sans jamais redescendre.
+      <br><a href="https://associationstepbystep.com" target="_blank" rel="noopener noreferrer" style="color:var(--orange);font-weight:600;">Soutenir via l’association Step by Step →</a>
     </div>
 
     <section class="hero">
@@ -866,6 +809,18 @@
       </button>
     </section>
 
+    <section class="goals-section">
+      <div class="goals-title">🎯 Objectifs Distance</div>
+      <div class="goals-subtitle">Objectif final : 8 000 km — France → Cap Nord</div>
+      <div class="goals-list" id="distGoals"></div>
+    </section>
+
+    <section class="goals-section">
+      <div class="goals-title">🏔️ Objectifs Dénivelé</div>
+      <div class="goals-subtitle">Dénivelé positif cumulé projeté à la verticale</div>
+      <div class="goals-list" id="elevGoals"></div>
+    </section>
+
     <section class="chart-section">
       <div class="chart-lbl">Dénivelé positif cumulé · échelle logarithmique</div>
       <div class="chart-wrap" id="cWrap"><div class="tt" id="tt"></div></div>
@@ -886,7 +841,43 @@
     </section>`;
 
             animNum("hNum", total);
+            renderGoals(totalKm, total);
             renderChart(days, total);
+        }
+
+        /* ══ GOALS RENDERING ══════════════════════════════ */
+        function renderGoals(totalKm, totalElev) {
+            const distEl = document.getElementById('distGoals');
+            const elevEl = document.getElementById('elevGoals');
+            if (!distEl || !elevEl) return;
+
+            distEl.innerHTML = DISTANCE_MILESTONES.map(ms => {
+                const pct = Math.min(1, totalKm / ms.km);
+                const done = pct >= 1;
+                return `<div class="goal-item ${done ? 'done' : ''}">
+                    <span class="goal-emoji">${ms.e}</span>
+                    <div class="goal-info">
+                        <div class="goal-name">${ms.n}</div>
+                        <div class="goal-val">${ms.km.toLocaleString('fr-FR')}\u202fkm</div>
+                    </div>
+                    <div class="goal-bar"><div class="goal-fill dist-fill" style="width:${(pct*100).toFixed(1)}%"></div></div>
+                    <span class="goal-check">${done ? '\u2705' : ''}</span>
+                </div>`;
+            }).join('');
+
+            elevEl.innerHTML = MILESTONES.map(ms => {
+                const pct = Math.min(1, totalElev / ms.m);
+                const done = pct >= 1;
+                return `<div class="goal-item ${done ? 'done' : ''}">
+                    <span class="goal-emoji">${ms.e}</span>
+                    <div class="goal-info">
+                        <div class="goal-name">${ms.n} · ${fmtM(ms.m)}</div>
+                        <div class="goal-val">${ms.desc || '' }</div>
+                    </div>
+                    <div class="goal-bar"><div class="goal-fill elev-fill" style="width:${(pct*100).toFixed(1)}%"></div></div>
+                    <span class="goal-check">${done ? '\u2705' : ''}</span>
+                </div>`;
+            }).join('');
         }
 
         /* ══ CHART ═══════════════════════════════════ */
@@ -916,15 +907,15 @@
                 { from: 0, to: 15000, bg: "rgba(76,153,59,.1)" },
                 { from: 15000, to: 50000, bg: "rgba(56,126,209,.1)" },
                 { from: 50000, to: 100000, bg: "rgba(44,82,200,.12)" },
-                { from: 100000, to: 200000, bg: "rgba(76,52,176,.14)" },
-                { from: 200000, to: 500000, bg: "rgba(30,27,75,.18)" },
+                { from: 100000, to: 2000000, bg: "rgba(76,52,176,.14)" },
+                { from: 2000000, to: 36000000, bg: "rgba(30,27,75,.18)" },
             ];
             const ZONE_LBLS = [
-                { from: 0, to: 15000, lbl: "Montagnes" },
+                { from: 0, to: 15000, lbl: "Basse Atmosphère" },
                 { from: 15000, to: 50000, lbl: "Stratosphère" },
-                { from: 50000, to: 100000, lbl: "Mésosphère" },
-                { from: 100000, to: 200000, lbl: "Espace" },
-                { from: 200000, to: 500000, lbl: "Orbite LEO" },
+                { from: 50000, to: 100000, lbl: "Zone des Météores" },
+                { from: 100000, to: 2000000, lbl: "Espace Proche" },
+                { from: 2000000, to: 36000000, lbl: "Grand Vide" },
             ];
 
             const zoneSVG = ZONES.map(z => {
