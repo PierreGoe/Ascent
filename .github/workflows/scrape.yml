@@ -5,11 +5,16 @@ on:
         - cron: "0 6 * * *" # Every day at 6:00 UTC
     workflow_dispatch: # Allow manual trigger
 
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
     scrape:
         runs-on: ubuntu-latest
         permissions:
             contents: write
+        outputs:
+            data_changed: ${{ steps.commit.outputs.data_changed }}
 
         steps:
             - name: Checkout
@@ -27,13 +32,53 @@ jobs:
               run: python scraper.py
 
             - name: Commit and push updated data
+              id: commit
               run: |
                   git config user.name "github-actions[bot]"
                   git config user.email "github-actions[bot]@users.noreply.github.com"
                   git add data/tours.json data/tours.js
                   if git diff --cached --quiet; then
                     echo "No changes to commit, skipping deploy"
+                    echo "data_changed=false" >> $GITHUB_OUTPUT
                   else
                     git commit -m "chore: update tours data"
                     git push
+                    echo "data_changed=true" >> $GITHUB_OUTPUT
                   fi
+
+    deploy:
+        needs: scrape
+        if: needs.scrape.outputs.data_changed == 'true'
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  ref: main
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20.19.0"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build project
+              run: npm run build
+
+            - name: Deploy to deploy branch
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist
+                  publish_branch: deploy
+                  force_orphan: true
+                  user_name: "github-actions[bot]"
+                  user_email: "github-actions[bot]@users.noreply.github.com"
+                  commit_message: "Deploy: update tours data"
