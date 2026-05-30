@@ -2,8 +2,34 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-05-28T15:22:34.979102",
+  "fetched_at": "2026-05-30T07:10:12.311924",
   "tours": [
+    {
+      "id": "2996252553",
+      "name": "à Camping au bord du lac avec abri",
+      "date": "2026-05-29T08:31:27.366+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 33249,
+      "time_h": 9,
+      "time_m": 14,
+      "distance_km": 98.3,
+      "speed_kmh": 16.9,
+      "ascent_m": 863,
+      "descent_m": 861
+    },
+    {
+      "id": "2993970706",
+      "name": "28 mai 2026",
+      "date": "2026-05-28T10:24:56.831+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 32991,
+      "time_h": 9,
+      "time_m": 9,
+      "distance_km": 81.3,
+      "speed_kmh": 15.8,
+      "ascent_m": 856,
+      "descent_m": 853
+    },
     {
       "id": "2990655836",
       "name": "27  mai 2026",
