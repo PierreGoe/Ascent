@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-05-30T07:10:12.311924",
+  "fetched_at": "2026-05-31T07:27:40.624521",
   "tours": [
+    {
+      "id": "2999239636",
+      "name": "30 mai mai",
+      "date": "2026-05-30T09:25:20.224+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 30233,
+      "time_h": 8,
+      "time_m": 23,
+      "distance_km": 56.9,
+      "speed_kmh": 20.7,
+      "ascent_m": 376,
+      "descent_m": 380
+    },
     {
       "id": "2996252553",
       "name": "à Camping au bord du lac avec abri",
