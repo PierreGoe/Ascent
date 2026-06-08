@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-06-07T07:33:35.651814",
+  "fetched_at": "2026-06-08T07:56:15.302392",
   "tours": [
+    {
+      "id": "3021443617",
+      "name": "7 juin 2026",
+      "date": "2026-06-07T07:10:57.132+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 38366,
+      "time_h": 10,
+      "time_m": 39,
+      "distance_km": 89.7,
+      "speed_kmh": 16.1,
+      "ascent_m": 1066,
+      "descent_m": 1075
+    },
     {
       "id": "3014721696",
       "name": "5 juin 2026",
