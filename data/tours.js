@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-06-08T07:56:15.302392",
+  "fetched_at": "2026-06-09T07:25:17.887210",
   "tours": [
+    {
+      "id": "3023986672",
+      "name": "8 juin 2026",
+      "date": "2026-06-08T07:07:14.929+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 42090,
+      "time_h": 11,
+      "time_m": 41,
+      "distance_km": 74.6,
+      "speed_kmh": 13.8,
+      "ascent_m": 971,
+      "descent_m": 973
+    },
     {
       "id": "3021443617",
       "name": "7 juin 2026",
@@ -16,6 +29,19 @@ const KOMOOT_DATA = {
       "speed_kmh": 16.1,
       "ascent_m": 1066,
       "descent_m": 1075
+    },
+    {
+      "id": "3017779780",
+      "name": "6 juin 2026",
+      "date": "2026-06-06T06:43:52.734+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 40851,
+      "time_h": 11,
+      "time_m": 20,
+      "distance_km": 105.9,
+      "speed_kmh": 16.5,
+      "ascent_m": 936,
+      "descent_m": 1155
     },
     {
       "id": "3014721696",
