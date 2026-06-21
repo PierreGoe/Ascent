@@ -2,8 +2,34 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-06-20T07:29:34.604522",
+  "fetched_at": "2026-06-21T07:48:23.377323",
   "tours": [
+    {
+      "id": "3052360807",
+      "name": "20 juin 2026",
+      "date": "2026-06-20T15:13:00.166+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 7412,
+      "time_h": 2,
+      "time_m": 3,
+      "distance_km": 10.2,
+      "speed_kmh": 33.5,
+      "ascent_m": 75,
+      "descent_m": 89
+    },
+    {
+      "id": "3052011598",
+      "name": "Sortie en camping car + ferry",
+      "date": "2026-06-20T09:37:57.873+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 20033,
+      "time_h": 5,
+      "time_m": 33,
+      "distance_km": 64.2,
+      "speed_kmh": 54.2,
+      "ascent_m": 506,
+      "descent_m": 498
+    },
     {
       "id": "3049971172",
       "name": "19 juin 2026",
