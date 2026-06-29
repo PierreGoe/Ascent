@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-06-28T07:30:37.157660",
+  "fetched_at": "2026-06-29T07:57:11.787456",
   "tours": [
+    {
+      "id": "3070411814",
+      "name": "28 juin 2026",
+      "date": "2026-06-28T07:40:17.703+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 33106,
+      "time_h": 9,
+      "time_m": 11,
+      "distance_km": 89.7,
+      "speed_kmh": 14.1,
+      "ascent_m": 868,
+      "descent_m": 813
+    },
     {
       "id": "3068367234",
       "name": "27 juin 2026",
