@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-04T08:42:32.118258",
+  "fetched_at": "2026-07-05T08:57:23.053261",
   "tours": [
+    {
+      "id": "3083430799",
+      "name": "Sortie à vélo",
+      "date": "2026-07-04T10:26:39.467+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 11379,
+      "time_h": 3,
+      "time_m": 9,
+      "distance_km": 17.9,
+      "speed_kmh": 19.5,
+      "ascent_m": 108,
+      "descent_m": 103
+    },
     {
       "id": "3081136993",
       "name": "cap Nord x2 retour",
