@@ -1,8 +1,34 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-05T08:57:23.053261",
+  "fetched_at": "2026-07-06T10:43:54.282346",
   "tours": [
+    {
+      "id": "3087079558",
+      "name": "De Havøysund - Lillefjord",
+      "date": "2026-07-05T08:41:17.520+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 26482,
+      "time_h": 7,
+      "time_m": 21,
+      "distance_km": 52.4,
+      "speed_kmh": 12.0,
+      "ascent_m": 634,
+      "descent_m": 625
+    },
+    {
+      "id": "3085330524",
+      "name": "Hurtigruten",
+      "date": "2026-07-05T04:54:19.159+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 12026,
+      "time_h": 3,
+      "time_m": 20,
+      "distance_km": 55.1,
+      "speed_kmh": 31.3,
+      "ascent_m": 327,
+      "descent_m": 288
+    },
     {
       "id": "3083430799",
       "name": "Sortie à vélo",
