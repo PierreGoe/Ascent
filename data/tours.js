@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-06T10:43:54.282346",
+  "fetched_at": "2026-07-07T09:49:02.271036",
   "tours": [
+    {
+      "id": "3089351965",
+      "name": "Lillefjord - Porsanger",
+      "date": "2026-07-06T07:18:47.032+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 35178,
+      "time_h": 9,
+      "time_m": 46,
+      "distance_km": 91.2,
+      "speed_kmh": 15.1,
+      "ascent_m": 595,
+      "descent_m": 594
+    },
     {
       "id": "3087079558",
       "name": "De Havøysund - Lillefjord",
