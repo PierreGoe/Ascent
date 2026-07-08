@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-07T09:49:02.271036",
+  "fetched_at": "2026-07-08T08:34:44.405527",
   "tours": [
+    {
+      "id": "3092277454",
+      "name": "De Porsangeri à Karigasniemi",
+      "date": "2026-07-07T09:51:44.709+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 39711,
+      "time_h": 11,
+      "time_m": 1,
+      "distance_km": 81.5,
+      "speed_kmh": 13.9,
+      "ascent_m": 673,
+      "descent_m": 527
+    },
     {
       "id": "3089351965",
       "name": "Lillefjord - Porsanger",
