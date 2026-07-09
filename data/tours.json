@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-08T08:34:44.405527",
+  "fetched_at": "2026-07-09T09:51:34.880031",
   "tours": [
+    {
+      "id": "3094586880",
+      "name": "Karigasniemi - Inari",
+      "date": "2026-07-08T08:18:26.830+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 42738,
+      "time_h": 11,
+      "time_m": 52,
+      "distance_km": 118.2,
+      "speed_kmh": 15.1,
+      "ascent_m": 829,
+      "descent_m": 860
+    },
     {
       "id": "3092277454",
       "name": "De Porsangeri à Karigasniemi",
