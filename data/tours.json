@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-09T09:51:34.880031",
+  "fetched_at": "2026-07-10T09:41:26.167739",
   "tours": [
+    {
+      "id": "3096568800",
+      "name": "De Inari à Ivalo",
+      "date": "2026-07-09T09:35:14.684+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 30155,
+      "time_h": 8,
+      "time_m": 22,
+      "distance_km": 48.9,
+      "speed_kmh": 15.2,
+      "ascent_m": 350,
+      "descent_m": 314
+    },
     {
       "id": "3094586880",
       "name": "Karigasniemi - Inari",
