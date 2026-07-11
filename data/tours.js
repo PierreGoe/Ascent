@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-10T09:41:26.167739",
+  "fetched_at": "2026-07-11T08:01:24.452158",
   "tours": [
+    {
+      "id": "3099410508",
+      "name": "De Inari à Sodankylä",
+      "date": "2026-07-10T09:41:36.086+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 36302,
+      "time_h": 10,
+      "time_m": 5,
+      "distance_km": 82.1,
+      "speed_kmh": 13.6,
+      "ascent_m": 649,
+      "descent_m": 558
+    },
     {
       "id": "3096568800",
       "name": "De Inari à Ivalo",
