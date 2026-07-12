@@ -2,11 +2,24 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-11T08:01:24.452158",
+  "fetched_at": "2026-07-12T08:22:51.476069",
   "tours": [
     {
+      "id": "3102429294",
+      "name": "De Siltaharju à Sodankyla",
+      "date": "2026-07-11T09:30:04.331+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 37595,
+      "time_h": 10,
+      "time_m": 26,
+      "distance_km": 97.7,
+      "speed_kmh": 16.1,
+      "ascent_m": 382,
+      "descent_m": 425
+    },
+    {
       "id": "3099410508",
-      "name": "De Inari à Sodankylä",
+      "name": "De Ivalo à Siltaharju",
       "date": "2026-07-10T09:41:36.086+03:00",
       "sport": "touringbicycle",
       "duration_s": 36302,
