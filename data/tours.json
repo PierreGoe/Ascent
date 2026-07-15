@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-14T08:12:52.115217",
+  "fetched_at": "2026-07-15T08:19:57.383836",
   "tours": [
+    {
+      "id": "3110581120",
+      "name": "De Tervola à Kuivaniemi",
+      "date": "2026-07-14T08:48:57.088+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 33629,
+      "time_h": 9,
+      "time_m": 20,
+      "distance_km": 88.4,
+      "speed_kmh": 14.1,
+      "ascent_m": 361,
+      "descent_m": 385
+    },
     {
       "id": "3107798022",
       "name": "De Rovaniemi à Tervola",
