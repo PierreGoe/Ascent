@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-15T08:19:57.383836",
+  "fetched_at": "2026-07-16T08:19:30.213137",
   "tours": [
+    {
+      "id": "3113387867",
+      "name": "De Kuivaniemi à Liminka",
+      "date": "2026-07-15T10:23:49.502+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 33473,
+      "time_h": 9,
+      "time_m": 17,
+      "distance_km": 95.5,
+      "speed_kmh": 15.2,
+      "ascent_m": 381,
+      "descent_m": 378
+    },
     {
       "id": "3110581120",
       "name": "De Tervola à Kuivaniemi",
