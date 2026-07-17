@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-16T08:19:30.213137",
+  "fetched_at": "2026-07-17T08:15:32.693851",
   "tours": [
+    {
+      "id": "3115642969",
+      "name": "De Liminka à Raahe",
+      "date": "2026-07-16T08:48:09.971+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 33451,
+      "time_h": 9,
+      "time_m": 17,
+      "distance_km": 71.9,
+      "speed_kmh": 12.8,
+      "ascent_m": 240,
+      "descent_m": 232
+    },
     {
       "id": "3113387867",
       "name": "De Kuivaniemi à Liminka",
