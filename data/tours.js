@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-17T08:15:32.693851",
+  "fetched_at": "2026-07-18T07:57:33.226005",
   "tours": [
+    {
+      "id": "3118244069",
+      "name": "De Raahe à Himanka",
+      "date": "2026-07-17T08:34:17.207+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 37980,
+      "time_h": 10,
+      "time_m": 33,
+      "distance_km": 81.1,
+      "speed_kmh": 13.3,
+      "ascent_m": 314,
+      "descent_m": 320
+    },
     {
       "id": "3115642969",
       "name": "De Liminka à Raahe",
