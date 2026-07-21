@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-20T09:20:58.136169",
+  "fetched_at": "2026-07-21T08:34:27.930474",
   "tours": [
+    {
+      "id": "3126620667",
+      "name": "De Lisa Bom à Vägvik",
+      "date": "2026-07-20T10:15:19.444+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 30923,
+      "time_h": 8,
+      "time_m": 35,
+      "distance_km": 90.7,
+      "speed_kmh": 16.2,
+      "ascent_m": 472,
+      "descent_m": 480
+    },
     {
       "id": "3124070676",
       "name": "De Himanka à Voyri",
