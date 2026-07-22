@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-21T08:34:27.930474",
+  "fetched_at": "2026-07-22T08:33:52.695201",
   "tours": [
+    {
+      "id": "3129760855",
+      "name": "De Vägvik à Stånggrund",
+      "date": "2026-07-21T09:59:01.968+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 37233,
+      "time_h": 10,
+      "time_m": 20,
+      "distance_km": 111.9,
+      "speed_kmh": 15.7,
+      "ascent_m": 1042,
+      "descent_m": 1039
+    },
     {
       "id": "3126620667",
       "name": "De Lisa Bom à Vägvik",
