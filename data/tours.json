@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-22T08:33:52.695201",
+  "fetched_at": "2026-07-23T08:35:27.935625",
   "tours": [
+    {
+      "id": "3132249003",
+      "name": "De Stånggrund à Ahlainen",
+      "date": "2026-07-22T13:04:08.498+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 20937,
+      "time_h": 5,
+      "time_m": 48,
+      "distance_km": 62.8,
+      "speed_kmh": 15.9,
+      "ascent_m": 627,
+      "descent_m": 627
+    },
     {
       "id": "3129760855",
       "name": "De Vägvik à Stånggrund",
