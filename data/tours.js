@@ -2,8 +2,34 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-24T08:31:47.781894",
+  "fetched_at": "2026-07-25T08:10:43.987446",
   "tours": [
+    {
+      "id": "3137617103",
+      "name": "De Nakkila à Yläne",
+      "date": "2026-07-24T08:21:49.454+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 33843,
+      "time_h": 9,
+      "time_m": 24,
+      "distance_km": 68.1,
+      "speed_kmh": 14.4,
+      "ascent_m": 663,
+      "descent_m": 621
+    },
+    {
+      "id": "3134679360",
+      "name": "De Ahlainen à Nakkila",
+      "date": "2026-07-23T11:18:30.612+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 21159,
+      "time_h": 5,
+      "time_m": 52,
+      "distance_km": 55.2,
+      "speed_kmh": 15.5,
+      "ascent_m": 517,
+      "descent_m": 510
+    },
     {
       "id": "3132249003",
       "name": "De Stånggrund à Ahlainen",
