@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-25T08:10:43.987446",
+  "fetched_at": "2026-07-26T08:31:34.247963",
   "tours": [
+    {
+      "id": "3140767127",
+      "name": "De Yläne à Turku",
+      "date": "2026-07-25T09:46:00.839+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 20547,
+      "time_h": 5,
+      "time_m": 42,
+      "distance_km": 64.1,
+      "speed_kmh": 14.2,
+      "ascent_m": 682,
+      "descent_m": 721
+    },
     {
       "id": "3137617103",
       "name": "De Nakkila à Yläne",
