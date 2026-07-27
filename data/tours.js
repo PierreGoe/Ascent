@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-26T08:31:34.247963",
+  "fetched_at": "2026-07-27T09:57:13.711177",
   "tours": [
+    {
+      "id": "3141714921",
+      "name": "De Turku à Varissuo",
+      "date": "2026-07-25T21:02:32.398+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 2405,
+      "time_h": 0,
+      "time_m": 40,
+      "distance_km": 7.4,
+      "speed_kmh": 15.1,
+      "ascent_m": 120,
+      "descent_m": 99
+    },
     {
       "id": "3140767127",
       "name": "De Yläne à Turku",
