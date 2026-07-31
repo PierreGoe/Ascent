@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-30T08:32:07.218507",
+  "fetched_at": "2026-07-31T08:54:08.639779",
   "tours": [
+    {
+      "id": "3155736593",
+      "name": "De Salo à Nummela",
+      "date": "2026-07-30T10:25:05.749+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 36592,
+      "time_h": 10,
+      "time_m": 9,
+      "distance_km": 80.0,
+      "speed_kmh": 13.4,
+      "ascent_m": 660,
+      "descent_m": 607
+    },
     {
       "id": "3153092282",
       "name": "De Turku à Salo",
