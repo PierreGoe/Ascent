@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-07-31T08:54:08.639779",
+  "fetched_at": "2026-08-01T08:25:24.843609",
   "tours": [
+    {
+      "id": "3158691262",
+      "name": "De Tallinna reid à Pikakari rand",
+      "date": "2026-07-31T09:46:24.717+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 46366,
+      "time_h": 12,
+      "time_m": 52,
+      "distance_km": 140.8,
+      "speed_kmh": 21.9,
+      "ascent_m": 580,
+      "descent_m": 636
+    },
     {
       "id": "3155736593",
       "name": "De Salo à Nummela",
