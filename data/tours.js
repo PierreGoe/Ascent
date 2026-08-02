@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-01T08:25:24.843609",
+  "fetched_at": "2026-08-02T08:28:16.317345",
   "tours": [
+    {
+      "id": "3161125629",
+      "name": "à Route forestière tranquille EV10",
+      "date": "2026-08-01T09:54:18.064+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 29048,
+      "time_h": 8,
+      "time_m": 4,
+      "distance_km": 52.0,
+      "speed_kmh": 14.3,
+      "ascent_m": 302,
+      "descent_m": 242
+    },
     {
       "id": "3158691262",
       "name": "De Tallinna reid à Pikakari rand",
