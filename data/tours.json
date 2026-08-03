@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-02T08:28:16.317345",
+  "fetched_at": "2026-08-03T09:52:08.079636",
   "tours": [
+    {
+      "id": "3166000029",
+      "name": "à Route forestière tranquille EV10",
+      "date": "2026-08-02T09:38:30.042+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 31526,
+      "time_h": 8,
+      "time_m": 45,
+      "distance_km": 78.0,
+      "speed_kmh": 14.6,
+      "ascent_m": 239,
+      "descent_m": 276
+    },
     {
       "id": "3161125629",
       "name": "à Route forestière tranquille EV10",
