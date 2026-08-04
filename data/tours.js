@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-03T09:52:08.079636",
+  "fetched_at": "2026-08-04T08:42:45.984821",
   "tours": [
+    {
+      "id": "3167747145",
+      "name": "De Muti küla à Majaka Küla",
+      "date": "2026-08-03T09:37:10.698+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 38068,
+      "time_h": 10,
+      "time_m": 34,
+      "distance_km": 80.0,
+      "speed_kmh": 14.4,
+      "ascent_m": 396,
+      "descent_m": 417
+    },
     {
       "id": "3166000029",
       "name": "à Route forestière tranquille EV10",
