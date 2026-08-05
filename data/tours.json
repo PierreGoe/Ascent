@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-04T08:42:45.984821",
+  "fetched_at": "2026-08-05T08:40:58.159396",
   "tours": [
+    {
+      "id": "3170594074",
+      "name": "De Muti küla à Penu",
+      "date": "2026-08-04T08:51:33.927+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 41786,
+      "time_h": 11,
+      "time_m": 36,
+      "distance_km": 94.6,
+      "speed_kmh": 15.0,
+      "ascent_m": 594,
+      "descent_m": 599
+    },
     {
       "id": "3167747145",
       "name": "De Muti küla à Majaka Küla",
