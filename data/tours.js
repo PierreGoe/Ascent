@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-05T08:40:58.159396",
+  "fetched_at": "2026-08-06T08:42:15.895280",
   "tours": [
+    {
+      "id": "3172967643",
+      "name": "De Penu à Riga",
+      "date": "2026-08-05T10:21:02.270+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 27588,
+      "time_h": 7,
+      "time_m": 39,
+      "distance_km": 50.9,
+      "speed_kmh": 14.4,
+      "ascent_m": 293,
+      "descent_m": 303
+    },
     {
       "id": "3170594074",
       "name": "De Muti küla à Penu",
