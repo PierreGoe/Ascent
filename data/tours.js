@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-06T08:42:15.895280",
+  "fetched_at": "2026-08-07T07:20:43.321441",
   "tours": [
+    {
+      "id": "3175677721",
+      "name": "De Riga à Jelgavas",
+      "date": "2026-08-06T08:51:30.176+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 31598,
+      "time_h": 8,
+      "time_m": 46,
+      "distance_km": 68.8,
+      "speed_kmh": 13.6,
+      "ascent_m": 322,
+      "descent_m": 310
+    },
     {
       "id": "3172967643",
       "name": "De Penu à Riga",
