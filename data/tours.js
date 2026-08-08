@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-07T07:20:43.321441",
+  "fetched_at": "2026-08-08T06:58:54.975052",
   "tours": [
+    {
+      "id": "3179026513",
+      "name": "De Jelgavas à Bubiai",
+      "date": "2026-08-07T09:10:48.875+03:00",
+      "sport": "touringbicycle",
+      "duration_s": 41273,
+      "time_h": 11,
+      "time_m": 27,
+      "distance_km": 93.5,
+      "speed_kmh": 12.4,
+      "ascent_m": 381,
+      "descent_m": 280
+    },
     {
       "id": "3175677721",
       "name": "De Riga à Jelgavas",
