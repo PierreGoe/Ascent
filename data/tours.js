@@ -2,8 +2,47 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-13T07:39:07.002815",
+  "fetched_at": "2026-08-14T07:36:37.104492",
   "tours": [
+    {
+      "id": "3197205205",
+      "name": "De Struveshof à Lubomino",
+      "date": "2026-08-13T08:49:20.209+02:00",
+      "sport": "racebike",
+      "duration_s": 36127,
+      "time_h": 10,
+      "time_m": 2,
+      "distance_km": 77.0,
+      "speed_kmh": 12.4,
+      "ascent_m": 521,
+      "descent_m": 459
+    },
+    {
+      "id": "3194748451",
+      "name": "De Budry à Struveshof",
+      "date": "2026-08-12T10:30:00.260+02:00",
+      "sport": "racebike",
+      "duration_s": 37183,
+      "time_h": 10,
+      "time_m": 19,
+      "distance_km": 66.8,
+      "speed_kmh": 12.0,
+      "ascent_m": 363,
+      "descent_m": 447
+    },
+    {
+      "id": "3191686496",
+      "name": "De Vilkavikis à Budry",
+      "date": "2026-08-11T09:02:25.273+02:00",
+      "sport": "racebike",
+      "duration_s": 38188,
+      "time_h": 10,
+      "time_m": 36,
+      "distance_km": 92.0,
+      "speed_kmh": 14.7,
+      "ascent_m": 582,
+      "descent_m": 694
+    },
     {
       "id": "3188254636",
       "name": "De à Vilkaviskis",
