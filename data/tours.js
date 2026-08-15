@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-14T07:36:37.104492",
+  "fetched_at": "2026-08-15T06:42:32.250750",
   "tours": [
+    {
+      "id": "3200138467",
+      "name": "De Lubomino à Prabuty Wieś",
+      "date": "2026-08-14T09:48:32.302+02:00",
+      "sport": "racebike",
+      "duration_s": 36312,
+      "time_h": 10,
+      "time_m": 5,
+      "distance_km": 94.2,
+      "speed_kmh": 13.5,
+      "ascent_m": 717,
+      "descent_m": 722
+    },
     {
       "id": "3197205205",
       "name": "De Struveshof à Lubomino",
