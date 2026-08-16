@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-15T06:42:32.250750",
+  "fetched_at": "2026-08-16T06:44:18.182318",
   "tours": [
+    {
+      "id": "3203215873",
+      "name": "De Wapnik à Świecie Obszar Wiejski",
+      "date": "2026-08-15T08:01:36.901+02:00",
+      "sport": "racebike",
+      "duration_s": 41242,
+      "time_h": 11,
+      "time_m": 27,
+      "distance_km": 77.5,
+      "speed_kmh": 12.1,
+      "ascent_m": 427,
+      "descent_m": 485
+    },
     {
       "id": "3200138467",
       "name": "De Lubomino à Prabuty Wieś",
