@@ -1,8 +1,34 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-18T06:48:58.908386",
+  "fetched_at": "2026-08-19T06:49:30.715145",
   "tours": [
+    {
+      "id": "3211740743",
+      "name": "De Wapnik à gmina Ujście",
+      "date": "2026-08-18T09:44:29.921+02:00",
+      "sport": "racebike",
+      "duration_s": 37220,
+      "time_h": 10,
+      "time_m": 20,
+      "distance_km": 75.9,
+      "speed_kmh": 12.3,
+      "ascent_m": 450,
+      "descent_m": 471
+    },
+    {
+      "id": "3208975285",
+      "name": "De Wapnik à Mrocza Obszar Wiejski",
+      "date": "2026-08-17T10:11:59.630+02:00",
+      "sport": "racebike",
+      "duration_s": 28920,
+      "time_h": 8,
+      "time_m": 2,
+      "distance_km": 74.4,
+      "speed_kmh": 13.8,
+      "ascent_m": 423,
+      "descent_m": 349
+    },
     {
       "id": "3203215873",
       "name": "De Wapnik à Świecie Obszar Wiejski",
