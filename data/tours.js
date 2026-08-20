@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-19T06:49:30.715145",
+  "fetched_at": "2026-08-20T06:51:22.853958",
   "tours": [
+    {
+      "id": "3213935960",
+      "name": "De Wapnik à Drezdenko Obszar Wiejski",
+      "date": "2026-08-19T09:00:08.157+02:00",
+      "sport": "racebike",
+      "duration_s": 34066,
+      "time_h": 9,
+      "time_m": 27,
+      "distance_km": 84.0,
+      "speed_kmh": 13.6,
+      "ascent_m": 324,
+      "descent_m": 380
+    },
     {
       "id": "3211740743",
       "name": "De Wapnik à gmina Ujście",
