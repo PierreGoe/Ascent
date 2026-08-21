@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-20T06:51:22.853958",
+  "fetched_at": "2026-08-21T06:52:18.490577",
   "tours": [
+    {
+      "id": "3216648230",
+      "name": "De Wapnik à Küstriner Vorland",
+      "date": "2026-08-20T08:07:16.704+02:00",
+      "sport": "racebike",
+      "duration_s": 38013,
+      "time_h": 10,
+      "time_m": 33,
+      "distance_km": 90.6,
+      "speed_kmh": 13.7,
+      "ascent_m": 403,
+      "descent_m": 422
+    },
     {
       "id": "3213935960",
       "name": "De Wapnik à Drezdenko Obszar Wiejski",
