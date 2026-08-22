@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-21T06:52:18.490577",
+  "fetched_at": "2026-08-22T06:44:37.801922",
   "tours": [
+    {
+      "id": "3218830791",
+      "name": "De küstriner Vorland à Rahnsdorf",
+      "date": "2026-08-21T09:09:48.937+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 34319,
+      "time_h": 9,
+      "time_m": 31,
+      "distance_km": 74.9,
+      "speed_kmh": 13.3,
+      "ascent_m": 447,
+      "descent_m": 428
+    },
     {
       "id": "3216648230",
       "name": "De Wapnik à Küstriner Vorland",
