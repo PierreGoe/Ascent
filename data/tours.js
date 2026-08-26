@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-25T06:53:25.655681",
+  "fetched_at": "2026-08-26T06:54:33.042112",
   "tours": [
+    {
+      "id": "3230404137",
+      "name": "à Maison chinoise (Chinesisches Haus), parc de Sanssouci",
+      "date": "2026-08-25T10:19:38.832+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 28287,
+      "time_h": 7,
+      "time_m": 51,
+      "distance_km": 37.5,
+      "speed_kmh": 11.8,
+      "ascent_m": 192,
+      "descent_m": 190
+    },
     {
       "id": "3218830791",
       "name": "De küstriner Vorland à Rahnsdorf",
