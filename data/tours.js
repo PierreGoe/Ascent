@@ -2,8 +2,34 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-26T06:54:33.042112",
+  "fetched_at": "2026-08-27T17:27:57.247116",
   "tours": [
+    {
+      "id": "3235899934",
+      "name": "De Woltersdorf à Hohe Börde",
+      "date": "2026-08-27T09:35:10.971+02:00",
+      "sport": "touringbicycle",
+      "duration_s": 33770,
+      "time_h": 9,
+      "time_m": 22,
+      "distance_km": 89.7,
+      "speed_kmh": 15.8,
+      "ascent_m": 429,
+      "descent_m": 359
+    },
+    {
+      "id": "3233066486",
+      "name": "De Posdam à Bensdorf",
+      "date": "2026-08-26T10:36:58.755+02:00",
+      "sport": "racebike",
+      "duration_s": 27374,
+      "time_h": 7,
+      "time_m": 36,
+      "distance_km": 53.0,
+      "speed_kmh": 13.1,
+      "ascent_m": 238,
+      "descent_m": 241
+    },
     {
       "id": "3230404137",
       "name": "à Maison chinoise (Chinesisches Haus), parc de Sanssouci",
