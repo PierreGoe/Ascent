@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-29T12:29:41.029116",
+  "fetched_at": "2026-08-30T11:32:51.135858",
   "tours": [
+    {
+      "id": "3241875206",
+      "name": "De Vechelde à Springe",
+      "date": "2026-08-29T11:09:20.220+02:00",
+      "sport": "racebike",
+      "duration_s": 29914,
+      "time_h": 8,
+      "time_m": 18,
+      "distance_km": 55.9,
+      "speed_kmh": 11.8,
+      "ascent_m": 335,
+      "descent_m": 285
+    },
     {
       "id": "3238324321",
       "name": "De Hohe Börde à Vechelde",
