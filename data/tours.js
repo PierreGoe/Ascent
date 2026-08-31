@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-30T11:32:51.135858",
+  "fetched_at": "2026-08-31T13:06:56.733076",
   "tours": [
+    {
+      "id": "3245019612",
+      "name": "De Springe à Lemgo",
+      "date": "2026-08-30T10:19:36.800+02:00",
+      "sport": "racebike",
+      "duration_s": 29902,
+      "time_h": 8,
+      "time_m": 18,
+      "distance_km": 57.8,
+      "speed_kmh": 11.0,
+      "ascent_m": 590,
+      "descent_m": 613
+    },
     {
       "id": "3241875206",
       "name": "De Vechelde à Springe",
