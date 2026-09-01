@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-08-31T13:06:56.733076",
+  "fetched_at": "2026-09-01T11:21:01.583018",
   "tours": [
+    {
+      "id": "3247090486",
+      "name": "De Lemgo à Warendorf",
+      "date": "2026-08-31T09:18:11.195+02:00",
+      "sport": "racebike",
+      "duration_s": 30549,
+      "time_h": 8,
+      "time_m": 29,
+      "distance_km": 73.7,
+      "speed_kmh": 13.4,
+      "ascent_m": 368,
+      "descent_m": 423
+    },
     {
       "id": "3245019612",
       "name": "De Springe à Lemgo",
