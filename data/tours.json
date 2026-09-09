@@ -1,8 +1,34 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-09-08T10:53:59.053248",
+  "fetched_at": "2026-09-09T10:58:19.650294",
   "tours": [
+    {
+      "id": "3267907912",
+      "name": "de Eindoven à Anvers",
+      "date": "2026-09-08T09:19:33.526+02:00",
+      "sport": "mtb_easy",
+      "duration_s": 27166,
+      "time_h": 7,
+      "time_m": 32,
+      "distance_km": 50.7,
+      "speed_kmh": 12.5,
+      "ascent_m": 215,
+      "descent_m": 237
+    },
+    {
+      "id": "3254745170",
+      "name": "3 septembre",
+      "date": "2026-09-03T08:49:30.834+02:00",
+      "sport": "racebike",
+      "duration_s": 34868,
+      "time_h": 9,
+      "time_m": 41,
+      "distance_km": 72.9,
+      "speed_kmh": 11.7,
+      "ascent_m": 279,
+      "descent_m": 274
+    },
     {
       "id": "3252287220",
       "name": "De Dülmen à Kevelaer",
