@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-09-16T11:07:45.982364",
+  "fetched_at": "2026-09-17T11:16:48.120302",
   "tours": [
+    {
+      "id": "3274148754",
+      "name": "de Courtrai à Prémesques",
+      "date": "2026-09-11T08:25:50.268+02:00",
+      "sport": "mtb_easy",
+      "duration_s": 15982,
+      "time_h": 4,
+      "time_m": 26,
+      "distance_km": 39.9,
+      "speed_kmh": 13.4,
+      "ascent_m": 215,
+      "descent_m": 195
+    },
     {
       "id": "3272458947",
       "name": "de Gand à Kortrijk",
@@ -19,7 +32,7 @@ const KOMOOT_DATA = {
     },
     {
       "id": "3270276898",
-      "name": "de Gand à Anvers",
+      "name": "de Anvers à Gand",
       "date": "2026-09-09T10:54:12.664+02:00",
       "sport": "mtb_easy",
       "duration_s": 26143,
@@ -32,7 +45,7 @@ const KOMOOT_DATA = {
     },
     {
       "id": "3267907912",
-      "name": "De Anvers à Gand",
+      "name": "De Rurnhout à Anvers",
       "date": "2026-09-08T09:19:33.526+02:00",
       "sport": "mtb_easy",
       "duration_s": 27166,
