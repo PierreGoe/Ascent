@@ -2,7 +2,7 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-10-21T11:25:12.945249",
+  "fetched_at": "2026-10-22T11:25:10.259684",
   "tours": [
     {
       "id": "3274148754",
