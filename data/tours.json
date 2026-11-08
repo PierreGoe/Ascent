@@ -1,8 +1,21 @@
 {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-11-07T12:41:07.847285",
+  "fetched_at": "2026-11-08T12:58:19.937263",
   "tours": [
+    {
+      "id": "3385460746",
+      "name": "de Pérenchies à Bois-Grenier",
+      "date": "2026-11-08T09:08:23.640+01:00",
+      "sport": "racebike",
+      "duration_s": 4121,
+      "time_h": 1,
+      "time_m": 8,
+      "distance_km": 23.7,
+      "speed_kmh": 22.1,
+      "ascent_m": 86,
+      "descent_m": 95
+    },
     {
       "id": "3375779321",
       "name": "de Pérenchies à Bois-Grenier",
