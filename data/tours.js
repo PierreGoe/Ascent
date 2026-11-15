@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-11-14T13:12:47.784758",
+  "fetched_at": "2026-11-15T13:40:36.610863",
   "tours": [
+    {
+      "id": "3394637350",
+      "name": "de Pérenchies à Bois-Grenier",
+      "date": "2026-11-15T09:10:49.778+01:00",
+      "sport": "racebike",
+      "duration_s": 4175,
+      "time_h": 1,
+      "time_m": 9,
+      "distance_km": 24.0,
+      "speed_kmh": 22.8,
+      "ascent_m": 120,
+      "descent_m": 120
+    },
     {
       "id": "3389910488",
       "name": "Ypres à Warneton 11/11/26 Retour (points noeux)",
