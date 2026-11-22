@@ -2,8 +2,21 @@
 const KOMOOT_DATA = {
   "user_id": "1939029710958",
   "display_name": "Charles GOEMANS",
-  "fetched_at": "2026-11-21T14:25:01.224566",
+  "fetched_at": "2026-11-22T14:18:28.390662",
   "tours": [
+    {
+      "id": "3402489564",
+      "name": "de Pérenchies à Bois-Grenier",
+      "date": "2026-11-22T10:19:58.917+01:00",
+      "sport": "racebike",
+      "duration_s": 3633,
+      "time_h": 1,
+      "time_m": 0,
+      "distance_km": 24.1,
+      "speed_kmh": 24.2,
+      "ascent_m": 93,
+      "descent_m": 105
+    },
     {
       "id": "3394637350",
       "name": "de Pérenchies à Bois-Grenier",
